@@ -8,7 +8,7 @@ lab:
 
 In dieser Übung erstellen Sie eine Messaging-Erweiterung mit einem Suchbefehl. Sie erstellen zunächst ein Projekt mit einer Teams Toolkit-Projektvorlage und aktualisieren es dann, um die Verwendung einer Azure KI Bot Service-Ressource für die lokale Entwicklung zu konfigurieren. Sie erstellen einen Dev-Tunnel, um die Kommunikation zwischen dem Bot-Dienst und Ihrem lokal ausgeführten Webdienst zu ermöglichen. Anschließend bereiten Sie Ihre App auf die Bereitstellung der erforderlichen Ressourcen vor. Schließlich führen Sie Ihre Messaging-Erweiterung aus und testen sie in Microsoft Teams.
 
-:::image type="content" source="../media/2-search-results-nuget.png" alt-text="Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden." lightbox="../media/2-search-results-nuget.png":::
+![Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden.](../media/2-search-results-nuget.png)
 
 ## Aufgabe 1 - Erstellen eines neuen Projekts mit Teams Toolkit für Visual Studio
 
@@ -19,8 +19,7 @@ Beginnen Sie, indem Sie ein neues Projekt erstellen.
 1. Erweitern Sie im Bildschirm Neues Projekt erstellen das Dropdown-Menü **Alle Plattformen** und wählen Sie dann **Microsoft Teams**. Klicken Sie auf **Weiter**, um fortzufahren.
 1. Auf dem Bildschirm Konfigurieren Sie Ihr neues Projekt. Füllen Sie die folgenden Werte aus:
     1. **Projektname**: MsgExtProductSupport
-    1. **Ort**: Wählen Sie einen Ort Ihrer Wahl aus
-    1. **Lösung und Projekt in dasselbe Verzeichnis legen**: Geprüft
+    1. **Speicherort**: Wählen Sie den Standardspeicherort aus.
 1. Wählen Sie **Erstellen**, um ein Gerüst für das Projekt zu erstellen
 1. Erweitern Sie im Dialogfeld Neue Teams-Anwendung erstellen das Dropdown-Menü **Alle Anwendungstypen** und wählen Sie dann **Messaging-Erweiterung**.
 1. Wählen Sie in der Liste der Vorlagen **Benutzerdefinierte Suchergebnisse**
@@ -149,7 +148,7 @@ Der letzte Schritt besteht darin, die Teams Toolkit-Projektdatei zu aktualisiere
 Fortsetzen in Visual Studio:
 
 1. Öffnen Sie im Projektstammordner **teamsapp.local.yml**
-1. Suchen Sie in der Datei den Schritt, der die **botAadApp/create**-Aktion verwendet, und ersetzen Sie ihn durch:
+1. Suchen Sie in der Datei den Schritt, der die Aktion **botAadApp/create** verwendet (Zeilen 17–26) und ersetzen Sie ihn durch:
 
     ```yml
       - uses: aadApp/create
@@ -181,7 +180,7 @@ Fortsetzen in Visual Studio:
           bicepCliVersion: v0.9.1
     ```
 
-1. Entfernen Sie in der Datei den Schritt, der die **botFramework/create**-Aktion verwendet.
+1. Entfernen Sie in der Datei den Schritt, der die Aktion **botFramework/create** verwendet (Zeilen 53–62).
 1. Speichern Sie die Änderungen.
 
 Die App-Registrierung wird in zwei Schritten bereitgestellt. Zuerst erstellt die **aadApp/create**-Aktion eine neue mehrinstanzenfähige App-Registrierung mit einem geheimen Clientschlüssel und schreibt seine Ausgaben als Umgebungsvariablen in die Datei **.env.local**. Anschließend verwendet die **aadApp/update**-Aktion die **entra.bot.manifest.json**-Datei, um die App-Registrierung zu aktualisieren.
@@ -192,18 +191,18 @@ Im letzten Schritt wird die **arm/deploy**-Aktion verwendet, um die Azure KI Bot
 
 Wenn der Benutzer mit Ihrer Nachrichtenerweiterung interagiert, sendet der Botdienst Anforderungen an den Webdienst. Während der Entwicklung wird der Webdienst lokal auf Ihrem Computer ausgeführt. Damit der Botdienst Ihren Webdienst erreichen kann, müssen Sie ihn über Ihren Computer über einen Dev-Tunnel hinaus verfügbar machen.
 
-:::image type="content" source="../media/18-select-dev-tunnel.png" alt-text="Screenshot des erweiterten Menüs "Dev Tunnels" in Visual Studio." lightbox="../media/18-select-dev-tunnel.png":::
+![Screenshot des erweiterten Menüs "Dev Tunnels" in Visual Studio.](../media/18-select-dev-tunnel.png)
 
 Fortsetzen in Visual Studio:
 
-1. Erweitern Sie auf der Symbolleiste das Menü "Debugprofil", indem **Sie die Dropdownschaltfläche neben Microsoft Teams (Browser)** auswählen.
+1. Vergewissern Sie sich in der Symbolleiste, dass **MsgExtProductSupport** als Startprojekt ausgewählt ist und erweitern Sie das Menü „Debugprofil“, indem Sie das Dropdown-Menü neben der Schaltfläche **Microsoft Teams (Browser)** oder **Projekt starten** auswählen.
 1. Erweitern Sie das Menü **Dev Tunnels (kein aktiver Tunnel)** und wählen Sie  **Tunnel erstellen...** aus.
 1. Geben Sie im Dialogfeld die folgenden Werte an:
-    1. **Konto**: Wählen Sie das gewünschte Konto aus.
+    1. **Konto**: Melden Sie sich mit Ihrem Microsoft 365-Benutzerkonto an.
     1. **Name**: MsgExtProductSupport
     1. **Tunneltyp**: Temporär
     1. **Zugriff**: Öffentlich
-1. Erstellen Sie den Tunnel, indem Sie **OK** auswählen. Es wird eine Eingabeaufforderung angezeigt, die besagt, dass der neue Tunnel jetzt der aktuelle aktive Tunnel ist.
+1. Erstellen Sie den Tunnel, indem Sie **OK** wählen.
 1. Schließen Sie die Eingabeaufforderung, indem Sie **OK** auswählen.
 
 ## Aufgabe 4 – Aktualisieren des App-Manifests
@@ -212,9 +211,9 @@ Das App-Manifest beschreibt die Features und Funktionen der App. Aktualisieren S
 
 Laden Sie zunächst die App-Symbole herunter, und fügen Sie sie dem Projekt hinzu.
 
-:::image type="content" source="../media/app/color-local.png" alt-text="Farbsymbol für die lokale Entwicklung." lightbox="../media/app/color-local.png":::
+![Farbsymbol für die lokale Entwicklung.](../media/app/color-local.png)
 
-:::image type="content" source="../media/app/color-dev.png" alt-text="Farbsymbol für die Remote-Entwicklung." lightbox="../media/app/color-dev.png":::
+![Farbsymbol für die Remote-Entwicklung.](../media/app/color-dev.png)
 
 1. Laden Sie die **color-local.png** und **color-dev.png** herunter.
 1. Fügen Sie im Ordner **appPackage** **color-local.png** und **color-dev.png** hinzu.
@@ -236,10 +235,9 @@ Fortsetzen in Visual Studio:
 Aktualisieren Sie zum Schluss die Symbole, den Namen und die Beschreibungsobjekte in der App-Manifestdatei.
 
 1. Öffnen Sie im Ordner **appPackage** die Datei mit dem Namen **manifest.json**.
-1. Aktualisieren Sie in der Datei die **Symbole**, den **Namen und die Objekte der **Beschreibung** mit:
+1. Ersetzen Sie in der Datei die Objekte **Symbole**, **Name** und **Beschreibung** durch die folgenden (Zeilen 13–24):
 
     ```json
-    {
         "icons": {
             "color": "color-${{TEAMSFX_ENV}}.png",
             "outline": "outline.png"
@@ -251,8 +249,7 @@ Aktualisieren Sie zum Schluss die Symbole, den Namen und die Beschreibungsobjekt
         "description": {
             "short": "Product look up tool.",
             "full": "Get real-time product information and share them in a conversation."
-        }
-    }
+        },
     ```
 
 1. Speichern Sie Ihre Änderungen.
@@ -261,18 +258,18 @@ Aktualisieren Sie zum Schluss die Symbole, den Namen und die Beschreibungsobjekt
 
 Führen Sie jetzt mit dem Teams-Toolkit den Prozess "Teams-App-Abhängigkeiten vorbereiten" aus, um die erforderlichen Ressourcen bereitzustellen.
 
-:::image type="content" source="../media/19-prepare-teams-app-dependencies.png" alt-text="Screenshot des maximierten Teams-Toolkit-Menüs in Visual Studio." lightbox="../media/19-prepare-teams-app-dependencies.png":::
+![Screenshot des maximierten Teams-Toolkit-Menüs in Visual Studio.](../media/19-prepare-teams-app-dependencies.png)
 
 Die Vorbereitung von Teams-App-Abhängigkeiten aktualisiert die **BOT_ENDPOINT** - und **BOT_DOMAIN** -Umgebungsvariablen in der env.local-Datei mithilfe der aktiven Dev-Tunnel-URL und führt die in der **teamsapp.local.yml**-Datei beschriebenen Aktionen aus.
 
 Fortsetzen in Visual Studio:
 
-1. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt **MsgExtProductSupport**
+1. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **TeamsApp**.
 1. Erweitern Sie das Menü **Teams Toolkit**, wählen Sie **Teams App-Abhängigkeiten vorbereiten**
 1. Wählen Sie im Dialogfeld **Microsoft 365-Konto** das Konto für Ihren Entwickler-Mandanten aus und wählen Sie dann **Fortfahren**.
 1. Wählen Sie im Dialogfeld **Bereitstellung** das Konto aus, das für die Bereitstellung von Ressourcen in Azure verwendet werden soll, und geben Sie die folgenden Werte an:
-    1. **Abonnementname**: Verwenden Sie die Dropdown-Liste, um ein Abonnement auszuwählen
-    1. **Ressourcengruppe**: Wählen Sie Neu..., um einen Dialog zu öffnen, geben Sie **rg-msgext-product-support-local ein, und wählen Sie **OK**
+    1. **Abonnementname**: Verwenden Sie die Dropdown-Liste, um ein Abonnement auszuwählen.
+    1. **Ressourcengruppe**: Erweitern Sie das Dropdown-Menü, und wählen Sie die Ressourcengruppe aus, die für Ihr Benutzerkonto bereits erstellt wurde.
     1. **Region**: Verwenden Sie das Dropdown-Menü, um die Region auszuwählen, die Ihnen am nächsten liegt
 1. Bereitstellen der Ressourcen in Azure durch Auswählen von **Bereitstellung**
 1. Wählen Sie in der Warnmeldung des Teams Toolkit die Option **Provision**
@@ -287,6 +284,7 @@ Starten Sie nun den Webdienst, und testen Sie die Messaging-Erweiterung. Sie ver
 Fortsetzen in Visual Studio:
 
 1. Drücken Sie F5, um eine Debugging-Sitzung zu starten und ein neues Browser-Fenster zu öffnen, das den Microsoft Teams-Web-Client navigiert.
+1. Wählen Sie **Ja**, wenn Sie gefragt werden, ob Sie den verschiedenen SSL-Zertifikaten vertrauen wollen, und wählen Sie dann erneut **Ja** bei Sicherheitswarnungen. Beachten Sie, dass Sie den Debugger möglicherweise neu starten müssen, nachdem Sie die Zertifikate akzeptiert haben.
 1. Wenn Sie dazu aufgefordert werden, geben Sie die Anmeldeinformationen für Ihr Microsoft 365-Konto ein.
 
   > [!IMPORTANT]
@@ -303,7 +301,7 @@ Fahren Sie mit der Installation der App fort:.
 
 1. Wählen Sie im Installationsdialog der App **Hinzufügen**aus
 1. Öffnen Sie einen neuen oder bestehenden Microsoft Teams-Chat
-1. Wählen Sie im Bereich Nachrichten verfassen **...** aus sum das App-Flyout zu öffnen
+1. Beginnen Sie im Bereich zum Verfassen von Nachrichten mit der Eingabe von **/apps**, um das Flyout zu öffnen.
 1. Wählen Sie in der Liste der Apps **Contoso-Produkte**, um die Messaging-Erweiterung zu öffnen
 1. Geben Sie in das Textfeld **Bot Builder** ein, um eine Suche zu starten
 1. Wählen Sie in der Ergebnisliste ein Ergebnis aus, um eine Karte in das Feld Nachricht verfassen einzubetten

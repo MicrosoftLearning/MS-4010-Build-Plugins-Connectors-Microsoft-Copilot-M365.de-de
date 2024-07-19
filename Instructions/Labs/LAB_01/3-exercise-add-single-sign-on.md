@@ -20,7 +20,7 @@ In Visual Studio:
     ```json
     "identifierUris": [
         "api://${{BOT_DOMAIN}}/botid-${{BOT_ID}}"
-    ]
+    ],
     ```
 
 1. Aktualisieren Sie in der Datei das Array **oauth2Permissions**, um einen Bereich zu erstellen, der es Teams erlaubt, Web-APIs als Administratorin oder Administrator oder Benutzerin oder Benutzer aufzurufen:
@@ -86,7 +86,7 @@ In Visual Studio:
             "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
           ]
         }
-      ]
+      ],
     ```
 
 1. Speichern Sie Ihre Änderungen.
@@ -96,13 +96,13 @@ Aktualisieren Sie als Nächstes die App-Manifestdatei, um die Ressource zu defin
 Fortsetzen in Visual Studio:
 
 1. Öffnen Sie im Ordner **appPackage** die Datei mit dem Namen **manifest.json**.
-1. Fügen Sie in der Datei  den folgenden Code hinzu:
+1. Fügen Sie in der Datei nach der **Beschreibung** den folgenden Code hinzu:
 
     ```json
     "webApplicationInfo": {
       "id": "${{BOT_ID}}",
       "resource": "api://${{BOT_DOMAIN}}/botid-${{BOT_ID}}"
-    }
+    },
     ```
 
 1. Speichern Sie Ihre Änderungen.
@@ -500,7 +500,7 @@ Führen Sie jetzt den Prozess „Teams-App-Abhängigkeiten vorbereiten“ aus, u
 
 Fortsetzen in Visual Studio:
 
-1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **MsgExtProductSupport**
+1. Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt **TeamsApp**.
 1. Erweitern Sie das Menü **Teams Toolkit**, wählen Sie **Teams App-Abhängigkeiten vorbereiten**
 1. Wählen Sie im Dialog **Microsoft 365-Konto** die Option **Fortfahren**
 1. Im Dialog **Bereitstellung** wählen Sie **Bereitstellung**
@@ -522,17 +522,12 @@ Fortsetzen in Visual Studio:
 1. Wählen Sie im Bereich Nachrichten verfassen **...** aus sum das App-Flyout zu öffnen
 1. Wählen Sie in der Liste der Apps **Contoso-Produkte**, um die Messaging-Erweiterung zu öffnen
 1. Geben Sie in das Textfeld **Bot Builder** ein, um eine Suche zu starten
-1. Wählen Sie in der Ergebnisliste die Option **Ein Ergebnis auswählen** aus, um eine Karte in das Feld zum Verfassen einer Nachricht einzubetten
 1. Eine Meldung, **Sie müssen sich anmelden, um diese App zu verwenden**, wird angezeigt.
 1. Wählen Sie den **Anmeldelink** aus, um eine neue Registerkarte zu öffnen und den Authentifizierungs-Flow zu starten.
-1. Überprüfen Sie auf der Seite „Berechtigungsgenehmigung“ die angeforderten Berechtigungen.
-1. Wählen Sie *Annehmen* aus, um die Registerkarte zu schließen und zu Microsoft Teams zurückzukehren.
-1. Wählen Sie im Bereich Nachrichten verfassen **...** aus sum das App-Flyout zu öffnen
-1. Wählen Sie in der Liste der Apps **Contoso-Produkte**, um die Messaging-Erweiterung zu öffnen
-1. Geben Sie in das Textfeld **Bot Builder** ein, um eine Suche zu starten
-1. Sie werden zur Anmeldung aufgefordert. Folgen Sie erneut dem **Anmeldelink**, um die Suche zu starten.
-1. Wählen Sie in der Ergebnisliste die Option **Ein Ergebnis auswählen** aus, um eine Karte in das Feld zum Verfassen einer Nachricht einzubetten
+1. Überprüfen Sie auf der Seite „Berechtigungseinwilligung“ die angeforderten Berechtigungen.
+1. Wählen Sie **Annehmen** aus, um die Registerkarte zu schließen und zu Microsoft Teams zurückzukehren.
+1. Wählen Sie in der Ergebnisliste die Option **Ergebnis auswählen** aus, um eine Karte in das Feld zum Verfassen einer Nachricht einzubetten und sie zu versenden.
 
 Schließen Sie den Browser, um die Debugging-Sitzung zu beenden.
 
-[Fahren Sie der nächsten Übung fort...](./4-exercise-retrieve-product-information-from-sharepoint-online.md)
+[Fahren Sie mit der nächsten Übung fort...](./4-exercise-retrieve-product-information-from-sharepoint-online.md)
