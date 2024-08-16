@@ -82,18 +82,11 @@ Die Beispielanwendung enthält einige Dokumente, auf die Copilot während der La
 
 Wenn Sie diese Aufgabe frühzeitig erledigen, ist die Wahrscheinlichkeit groß, dass die Microsoft 365-Suchmaschine sie bereits entdeckt hat, wenn Sie sie brauchen.
 
-## Aufgabe 4 - Installieren und Einrichten von Teams Toolkit für Visual Studio Code
+## Aufgabe 4: Konfigurieren von Teams-Toolkit für Visual Studio Code
 
 In dieser Aufgabe werden Sie die aktuelle Version von [Teams Toolkit für Visual Studio Code](https://learn.microsoft.com/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) installieren. Am einfachsten ist es, dies direkt in Visual Studio Code zu tun.
 
-> [!NOTE]
-> Installieren Sie nicht die Vorabversion, da sie nicht mit diesem Lab getestet wurde.
-
 1. Öffnen Sie Ihren **Arbeitsordner** in Visual Studio Code. Möglicherweise werden Sie gebeten, den Autoren dieses Ordners zu vertrauen; wenn ja, dann tun Sie das bitte.
-
-1. Wählen Sie in der linken Randleiste **Erweiterungen** 1️⃣. Geben Sie das Wort **Teams** in das Suchfeld 2️⃣ ein und suchen Sie **Teams Toolkit** in den Suchergebnissen. Wählen Sie **Installieren** 3️⃣.
-
-    ![Screenshot der Installation von Teams Toolkit in Visual Studio Code.](../media/1-04-install-teams-toolkit-01.png)
 
 1. Wählen Sie nun das Symbol **Teams Toolkit** auf der linken Seite 1️⃣. Wenn die Möglichkeit besteht, ein neues Projekt zu erstellen, befinden Sie sich wahrscheinlich im falschen Ordner. Im **Visual Studio Code Dateimenü** wählen Sie **Ordner öffnen** und öffnen direkt den Ordner **msgext-northwind-inventory-ts**. Sie sollten Abschnitte für Konten, Umgebung usw. sehen, wie unten dargestellt.
 
@@ -103,7 +96,7 @@ In dieser Aufgabe werden Sie die aktuelle Version von [Teams Toolkit für Visual
 
 1. Es öffnet sich ein Browserfenster, in dem Sie sich bei Microsoft 365 anmelden können. Wenn es heißt **Sie sind jetzt angemeldet und schließen diese Seite**, tun Sie dies bitte.
 
-1. Vergewissern Sie sich abschließend, dass ein grünes Häkchen neben **Querladen aktiviert** erscheint. Wenn dies nicht der Fall ist, bedeutet dies, dass Ihr Benutzerkonto keine Berechtigung zum Hochladen von Teams-Anwendungen hat. Diese Berechtigung ist standardmäßig ausgeschaltet; hier sind [Anweisungen, wie Benutzende benutzerdefinierte Apps hochladen können](https://learn.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps)
+1. Vergewissern Sie sich abschließend, dass ein grünes Häkchen neben **Benutzerdefinierter App-Upload aktiviert** erscheint. Wenn dies nicht der Fall ist, bedeutet dies, dass Ihr Benutzerkonto keine Berechtigung zum Hochladen von Teams-Anwendungen hat. Diese Berechtigung ist standardmäßig ausgeschaltet; hier sind [Anweisungen, wie Benutzende benutzerdefinierte Apps hochladen können](https://learn.microsoft.com/microsoftteams/teams-custom-app-policies-and-settings#allow-users-to-upload-custom-apps)
 
     ![Screenshot der Überprüfung, ob das Querladen aktiviert ist.](../media/1-04-setup-teams-toolkit-03.png)
 

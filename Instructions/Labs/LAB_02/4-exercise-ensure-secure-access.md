@@ -64,12 +64,12 @@ Konfigurieren Sie zunächst eine der Seiten, die Sie importieren, damit nur für
 Im Webbrowser:
 
 1. Navigieren Sie zum Azure-Portal unter [https://portal.azure.com](https://portal.azure.com) und melden Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto an.
-1. Wählen Sie in der Seitenleiste **Microsoft Entra ID**.
-1. Wählen Sie in der Navigation **Benutzende**.
+1. Wählen Sie in der Seitenleiste **Ansicht** unter **Microsoft Entra ID**.
+1. Wählen Sie in der Navigation **Verwalten** > **Benutzende**.
 1. Öffnen Sie in der Benutzerliste einen der Benutzenden, indem Sie seinen Namen auswählen.
 1. Kopieren Sie den Wert der Eigenschaft **Objekt-ID**.
 
-   :::image type="content" source="../media/8-user.png" alt-text="Screenshot des Azure-Portals mit einem geöffneten Benutzerprofil.":::
+  ![Screenshot des Azure-Portals mit einem geöffneten Benutzerprofil.](../media/8-user.png)
 
 Verwenden Sie diesen Wert, um eine neue ACL für eine bestimmte Markdownseite zu definieren.
 
@@ -188,15 +188,7 @@ Im Code-Editor:
 
 Erweitern wir nun den Code so, dass eine andere Seite nur für eine ausgewählte Gruppe von Benutzenden zugänglich ist.
 
-Im Webbrowser:
-
-1. Navigieren Sie zum Azure-Portal unter [https://portal.azure.com](https://portal.azure.com) und melden Sie sich mit Ihrem Geschäfts-, Schul- oder Unikonto an.
-1. Wählen Sie in der Seitenleiste **Microsoft Entra ID**.
-1. Wählen Sie in der Navigation **Gruppen**
-1. Öffnen Sie in der Liste der Gruppen eine der Gruppen, indem Sie deren Namen auswählen.
-1. Kopieren Sie den Wert der Eigenschaft **Objekt-ID**.
-
-:::image type="content" source="../media/8-group.png" alt-text="Screenshot des Azure-Portals mit einer geöffneten Gruppenseite.":::
+![Screenshot des Azure-Portals mit einer geöffneten Gruppenseite.](../media/8-group.png)
 
 Verwenden Sie diesen Wert, um eine neue ACL für eine bestimmte Markdownseite zu definieren.
 
