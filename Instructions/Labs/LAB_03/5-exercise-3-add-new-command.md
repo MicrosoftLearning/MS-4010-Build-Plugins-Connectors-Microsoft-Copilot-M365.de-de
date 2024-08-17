@@ -46,19 +46,27 @@ Um dies zu erreichen, gehen wir die folgenden Aufgaben durch:
    ```
 
 > [!NOTE] 
-> Die **ID** ist die Verbindung zwischen der Benutzeroberfläche und dem Code. Dieser Wert ist als **COMMAND_ID** in den **discount/product/SearchCommand.ts**-Dateien definiert. Sehen Sie, dass jede dieser Dateien eine eindeutige **COMMAND_ID** hat, die dem Wert von **ID** entspricht.
+> Die **ID** ist die Verbindung zwischen der Benutzeroberfläche und dem Code. Dieser Wert ist als **COMMAND_ID** in den Dateien **discount\product\SearchCommand.ts** definiert. Sehen Sie, dass jede dieser Dateien eine eindeutige **COMMAND_ID** hat, die dem Wert von **ID** entspricht.
 
 ## Aufgabe 2 - Erstellen Sie einen Handler für den Befehl 'companySearch'. 
 
 In dieser Übung werden wir einen Teil des vorhandenen Codes kopieren, um neue Handler für unsere Befehle zu erstellen. 
 
-1. Kopieren Sie in Visual Studio Code die Datei "**productSearchCommand.ts**" und fügen Sie sie in denselben Ordner ein, um eine Kopie zu erstellen. Benennen Sie diese Datei in **customerSearchCommand.ts**um
+1. Navigieren Sie in Visual Studio Code unter Ihrem **Arbeitsverzeichnis** zu **.\rc\messageExtensions** und kopieren Sie **productSearchCommand.ts** und fügen Sie es in denselben Ordner ein, um eine Kopie zu erstellen. Benennen Sie diese Datei in **customerSearchCommand.ts**um
+
+1. Zeile 7 ändern in:
+
+    ```typescript
+    import { searchProductsByCustomer } from "../northwindDB/products";
+    ```
 
 1. Zeile 10 ändern in:
 
    ```javascript
    const COMMAND_ID = "companySearch";
    ```
+
+
 
 1. Ersetzen Sie den Inhalt von **handleTeamsMessagingExtensionQuery** durch:
 

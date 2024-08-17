@@ -16,7 +16,7 @@ Diese Übung dauert etwa **XX Minuten**.
 
 In dieser Übung kopieren Sie die Beispielinhaltsdateien der Übung von [GitHub](https://pnp.github.io/download-partial/?url=https://github.com/pnp/graph-connectors-samples/tree/main/samples/dotnet-csharp-graphdocs/content) und speichern sie in Ihrem Projekt in einem Ordner mit dem Namen **Inhalt**.
 
-:::image type="content" source="../media/6-content-files.png" alt-text="Screenshot eines Code-Editors mit den Inhaltsdateien dieser Übung.":::
+![Screenshot eines Code-Editors mit den Inhaltsdateien dieser Übung.](../media/6-content-files.png)
 
 Damit der Code ordnungsgemäß funktioniert, muss der **Inhaltsordner** und dessen Inhalt in den Build-Ausgabeordner kopiert werden.
 

@@ -34,7 +34,7 @@ SECRET_STORAGE_ACCOUNT_CONNECTION_STRING=UseDevelopmentStorage=true
 
 ## Aufgabe 2: Lokales Ausführen der App
 
-1. Drücken Sie in Visual Studio Code bei geöffnetem **Arbeitsordner** die Taste **F5**, um das Debugging zu starten, oder wählen Sie die Schaltfläche Start 1️⃣. 
+1. Drücken Sie in Visual Studio Code bei geöffnetem **Arbeitsordner** die Taste **F5**, um das Debugging zu starten, oder wählen Sie die Schaltfläche Start 1️⃣.
 
 1. Wählen Sie **Debuggen in Teams (Edge)** 2️⃣.
 
@@ -180,9 +180,9 @@ Lesen Sie die Beschreibungen im obigen JSON sorgfältig, wenn Sie eine Abfrage e
 
 - **_c,bev_** - Suchen Sie Produkte in Kategorien, die mit **bev** beginnen, und Namen, die mit **c** beginnen.
 
-- **_,,out_** - Suchen Sie Produkte, die nicht mehr vorrätig sind.
+- **_,,out,_** – Suchen Sie Produkte, die nicht mehr vorrätig sind.
 
-- **_,,on,London_** - Suchen Sie Produkte, die von Lieferanten in London bestellt sind.
+- **_,,in,London_** – Suchen Sie Produkte, die von Lieferanten in London bestellt wurden.
 
 - **_tofu,produce,,Osaka_** - Suchen Sie Produkte in der Kategorie **Erzeugnis** mit Lieferanten in **Osaka** und Namen, die mit **Tofu** beginnen.
 
@@ -200,7 +200,7 @@ Lassen Sie uns einen kurzen Umweg unternehmen, damit Sie sehen können, wie Mass
 
     ![Screenshot des Erstellens einer neuen E-Mail in Outlook.](../media/2-04-test-message-extension-outlook-02.png)
 
-1. Fügen Sie einen **Empfänger** 1️⃣ und einen **Betreff** 2️⃣ hinzu, und positionieren Sie dann den Cursor im Textkörper der Nachricht 3️⃣. Sie können sogar etwas eingeben. Wenn Sie fertig sind, wählen Sie die **App-Schaltfläche** in der Symbolleiste 4️⃣ aus.
+1. Fügen Sie einen **Empfänger** 1️⃣ und einen **Betreff** 2️⃣ hinzu, und positionieren Sie dann den Cursor im Textkörper der Nachricht 3️⃣. Sie können sogar etwas eingeben. Wenn Sie bereit sind, wählen Sie **Einfügen** aus der Symbolleiste und wählen Sie **Apps** in der Symbolleiste 4️⃣.
 
     ![Screenshot der Auswahl der App-Schaltfläche beim Verfassen einer Outlook-Nachricht.](../media/2-04-test-message-extension-outlook-03.png)
 

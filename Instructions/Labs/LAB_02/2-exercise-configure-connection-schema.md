@@ -19,8 +19,8 @@ Beginnen Sie, indem Sie eine neue Entra-App-Registrierung registrieren, die der 
 In einem Webbrowser:
 
 1. Wechseln Sie zum **Azure-Portal** unter [https://portal.azure.com](https://portal.azure.com).
-1. Wählen Sie im Navigationsbereich **Microsoft Entra ID** aus.
-1. Wählen Sie im seitlichen Navigationsbereich die Option **App-Registrierungen** aus.
+1. Wählen Sie in der Navigation **Ansicht** unter **Microsoft Entra ID**.
+1. Erweitern Sie in der Seitennavigation die Option **Verwalten** und wählen Sie **App-Registrierungen**.
 1. Wählen Sie im oberen Navigationsbereich **Neue Registrierung** aus.
 1. Füllen Sie die folgenden Werte aus:
    1. **Name:** MSGraph docs Graph-Connector
@@ -34,8 +34,9 @@ Da dieser benutzerdefinierte Graph-Connector ohne Benutzerinteraktion ausgeführ
 
 Fortsetzen im Webbrowser:
 
-1. Wählen Sie im seitlichen Navigationsbereich **Zertifikate und geheime Schlüssel** aus.
-1. Aktivieren Sie die Registerkarte **Geheime Clientschlüssel** und wählen Sie die Option **Neuer geheimer Clientschlüssel** aus.
+1. Erweitern Sie in der seitlichen Navigation **Verwalten** und wählen Sie **Zertifikate und Geheimnisse**.
+1. Wählen Sie die Registerkarte **Client-Geheimnisse** und wählen Sie dann **Neuer geheimer Clientschlüssel**.
+1. Geben Sie eine **Beschreibung** des geheimen Schlüssels des **MSGraph-Dokuments für den Graph-Connector ein**.
 1. Erstellen Sie den geheimen Schlüssel, indem Sie **Hinzufügen** auswählen.
 1. Kopieren Sie den **Wert** des neu erstellten geheimen Schlüssels. Sie benötigen die Information später.
 
@@ -60,11 +61,12 @@ Fortsetzen im Webbrowser:
 
 Nachdem Sie die Entra-App-Registrierung konfiguriert haben, besteht der nächste Schritt darin, eine Konsolen-App zu erstellen, in der Sie den Code des Graph-Connectors implementieren.
 
-In einem Terminal:
+Öffnen Sie ein Windows-Terminal, um eine neue Konsolenanwendung zu erstellen:
 
-1. Erstellen Sie einen neuen Ordner, und ändern Sie das Arbeitsverzeichnis in diesen Ordner.
+1. Erstellen Sie einen neuen Ordner, indem Sie `mkdir documents\console_app` eingeben und navigieren Sie dann zu dem neuen Ordner, indem Sie `cd .\documents\console_app` eingeben.
 1. Erstellen Sie eine neue Konsolenanwendung, indem Sie `dotnet new console` ausführen.
 1. Fügen Sie Abhängigkeiten hinzu, die Sie zum Erstellen des Connectors benötigen:
+   1. Fügen Sie Nuget.org als Paketquelle hinzu und führen Sie `dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org` aus.
    1. Um die Bibliothek hinzuzufügen, die für die Authentifizierung mit Microsoft 365 erforderlich ist, führen Sie `dotnet add package Azure.Identity` aus.
    1. Um die Clientbibliothek für die Kommunikation mit Graph-APIs hinzuzufügen, führen Sie `dotnet add package Microsoft.Graph` aus.
    1. Führen Sie `dotnet add package Microsoft.Extensions.Configuration.UserSecrets` zum Hinzufügen der Bibliothek aus, die zum Arbeiten mit geheimen Benutzerschlüsseln erforderlich ist, die Sie im nächsten Schritt konfigurieren.
@@ -88,9 +90,9 @@ In einem Terminal:
 
 ## Aufgabe 6 - Microsoft Graph-Client erstellen
 
-Benutzerdefinierte Graph-Connectors verwenden die Microsoft Graph-API zur Verwaltung ihrer externen Verbindungen und -Elemente. Beginnen Sie, indem Sie eine Instanz der Klasse `GraphServiceClient` aus dem NuGet-Paket **Microsoft.Graph** erstellen, das Sie im Projekt installiert haben.
+Benutzerdefinierte Graph-Connectors verwenden die Microsoft Graph-API zur Verwaltung ihrer externen Verbindungen und Elemente. Beginnen Sie, indem Sie eine Instanz der Klasse `GraphServiceClient` aus dem NuGet-Paket **Microsoft.Graph** erstellen, das Sie im Projekt installiert haben.
 
-1. Öffnen Sie Ihr Projekt in Ihrem Code-Editor
+1. Öffnen Sie Ihr Projekt in Visual Studio 2022.
 1. Fügen Sie in Ihrem Projekt eine neue Codedatei mit dem Namen **GraphService.cs** hinzu.
 1. Beginnen Sie in der Datei mit dem Hinzufügen von Verweisen auf die zu verwendenden Namespaces, indem Sie hinzufügen:
 
@@ -141,7 +143,7 @@ Benutzerdefinierte Graph-Connectors verwenden die Microsoft Graph-API zur Verwal
    }
    ```
 
-1. Erstellen Sie eine neue Instanz von `GraphServiceClient` und verwenden Sie als Anmeldeinformationen die Informationen über die Registrierung der Entra-App, die Sie zuvor gespeichert haben:
+1. Erstellen Sie innerhalb des Abrufs eine neue Instanz von `GraphServiceClient` und verwenden Sie dabei einen Berechtigungsnachweis mit den Informationen zur Entra-App-Registrierung, die Sie zuvor gespeichert haben:
 
    ```csharp
    var builder = new ConfigurationBuilder().AddUserSecrets<GraphService>();
@@ -174,7 +176,7 @@ Benutzerdefinierte Graph-Connectors verwenden die Microsoft Graph-API zur Verwal
        {
          if (_client is null)
          {
-           var builder = new ConfigurationBuilder().   AddUserSecrets<GraphService>();
+           var builder = new ConfigurationBuilder().AddUserSecrets<GraphService>();
            var config = builder.Build();
      
            var clientId = config["EntraId:ClientId"];
@@ -226,7 +228,7 @@ Im Code-Editor:
        {
          Id = "msgraphdocs",
          Name = "Microsoft Graph documentation",
-         Description = "Documentation for Microsoft Graph API which    explains what Microsoft Graph is and how to use it."
+         Description = "Documentation for Microsoft Graph API which explains what Microsoft Graph is and how to use it."
        };
      }
    }
@@ -389,6 +391,7 @@ Im Code-Editor:
    ```csharp
    async static Task CreateConnection()
    {
+
    }
    ```
 

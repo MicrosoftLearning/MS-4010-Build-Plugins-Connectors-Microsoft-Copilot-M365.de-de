@@ -13,11 +13,6 @@ In dieser Übung führen Sie die Anwendung als Plug-In für Microsoft Copilot f�
 
 ## Aufgabe 1 – Test in Microsoft Copilot für Microsoft 365 (einzelner Parameter)
 
-1. Schalten Sie in Microsoft Teams die Option ** Das neue Teams testen** aus, um zur Clientanwendung **Neue Teams **zu wechseln.
-
-    > [!IMPORTANT]
-    > Microsoft Copilot für Microsoft 365 funktioniert nur in der Oberfläche **Neues Teams** . Bitte lassen Sie diese Aufgabe nicht aus! Wenn Sie den Debugger nach dem Wechsel zum **Neuen Teams** neu starten, wird nach dem Start des Debuggers möglicherweise eine Fehlermeldung angezeigt. Dies ist ein bekanntes Problem; Schließen Sie einfach das Fehlerdialogfeld, und fahren Sie mit dem Testen fort.
-
 1. Wählen Sie in der Anwendungsschiene auf der linken Seite die **Copilot**-App aus.
 
 1. Wählen Sie auf der rechten Seite des Felds zum Verfassen das Symbol **Plug-In **1️⃣ aus, und aktivieren Sie das **Northwind Inventory**-Plug-In 2️⃣.

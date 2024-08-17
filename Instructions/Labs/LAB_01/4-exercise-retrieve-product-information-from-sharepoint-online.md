@@ -8,7 +8,7 @@ lab:
 
 In dieser Übung stellen Sie eine SharePoint Online-Website bereit und konfigurieren sie, die Produktinformationen als Elemente in einer Liste speichert. Sie aktualisieren den Code der Messaging-Erweiterung, um die Listenelemente aus SharePoint Online mit dem Microsoft Graph SDK abzurufen und die Daten der Listenelemente in den Suchergebnissen zurückzugeben. Schließlich führen Sie Ihre Messaging-Erweiterung aus und testen sie in Microsoft Teams.
 
-:::image type="content" source="../media/4-search-results-sharepoint-online.png" alt-text="Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden. Die Suchergebnisse werden von SharePoint Online zurückgegeben. Jedes Suchergebnis zeigt den Produktnamen, die Kategorie und das Produktbild an." lightbox="../media/4-search-results-sharepoint-online.png":::
+![Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden. Die Suchergebnisse werden von SharePoint Online zurückgegeben. Jedes Suchergebnis zeigt den Produktnamen, die Kategorie und das Produktbild an.](../media/4-search-results-sharepoint-online.png)
 
 ## Aufgabe 1 - Bereitstellung und Konfiguration der SharePoint-Website für das Produktmarketing
 
@@ -26,7 +26,7 @@ In einem Webbrowser:
 
 Eine E-Mail wird an Ihre E-Mail-Adresse gesendet, um Sie zu benachrichtigen, wenn die Bereitstellung der Website abgeschlossen ist.. Dieser Vorgang kann einige Minuten dauern.
 
-:::image type="content" source="../media/1-sharepoint-online-product-support-site.png" alt-text="Screenshot der Homepage der SharePoint Online-Teamseite für Produktsupport. Es wird eine Liste der kürzlich veröffentlichten Produkte angezeigt." lightbox="../media/1-sharepoint-online-product-support-site.png":::
+![Screenshot der Startseite der SharePoint Online-Teamseite für Produktsupport. Es wird eine Liste der kürzlich veröffentlichten Produkte angezeigt.](../media/1-sharepoint-online-product-support-site.png)
 
 Um die Filterung der Spalten Titel und Einzelhandelskategorie bei der Abfrage der Liste mit Microsoft Graph API zu aktivieren, erstellen Sie Indizes für die Liste.
 
