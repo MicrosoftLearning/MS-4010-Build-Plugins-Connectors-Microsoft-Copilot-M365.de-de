@@ -1,36 +1,32 @@
 ---
 lab:
   title: Einführung
-  module: 'LAB 03: Connect Copilot for Microsoft 365 to your external data in real-time with message extension plugins built with .NET and Visual Studio'
+  module: 'LAB 01: Connect Copilot for Microsoft 365 to your external data in real-time with message extension plugins built with .NET and Visual Studio'
 ---
 
 # Einführung
 
-Mithilfe von Messaging-Erweiterungen können Benutzerinnen und Benutzer mit externen Systemen aus Microsoft Teams und Microsoft Outlook arbeiten. Benutzerinnen und Benutzer können Messaging-Erweiterungen verwenden, um Daten nachzuschlagen und zu ändern und die Informationen aus diesen Systemen in Nachrichten und E-Mails als umfangreich formatierte Karte freizugeben.
+Mithilfe von Messaging-Erweiterungen können Benutzerinnen und Benutzer mit externen Systemen aus Microsoft Teams und Microsoft Outlook arbeiten. Die Benutzer können Nachrichtenerweiterungen verwenden, um Daten aus diesen Systemen in Nachrichten und E-Mails nachzuschlagen, zu ändern und weiterzugeben, und zwar in Form einer formatierten Karte.
 
-Angenommen, Sie haben eine SharePoint Online-Liste mit Produktinformationen, die aktuell und für Ihre Organisation relevant sind. Sie möchten diese Informationen in Microsoft 365 suchen und freigeben. Sie möchten auch, dass Copilot für Microsoft 365 diese Informationen in seinen Antworten verwendet.
+Angenommen, Sie haben eine benutzerdefinierte API, die Sie für den Zugriff auf Produktinformationen verwenden, die aktuell und für Ihre Organisation relevant sind. Sie möchten diese Informationen in Microsoft 365 suchen und freigeben. Sie möchten auch, dass Copilot für Microsoft 365 diese Informationen in seinen Antworten verwendet.
 
-![Screenshot der Startseite der SharePoint Online-Teamseite für Produktsupport. Es wird eine Liste der kürzlich veröffentlichten Produkte angezeigt.](../media/1-sharepoint-online-product-support-site.png)
+In diesem Modul erstellen Sie eine Messaging-Erweiterung. Ihre Messaging-Erweiterung verwendet einen Bot, um mit Microsoft Teams, Microsoft Outlook und Copilot für Microsoft 365 zu kommunizieren.
 
-In diesem Lab erstellen Sie eine Nachrichtenerweiterung. Ihre Messaging-Erweiterung verwendet einen Bot, um mit Microsoft Teams, Microsoft Outlook und Copilot für Microsoft 365 zu kommunizieren.
+![Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden.](../media/1-search-results.png)
 
-![Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden.](../media/2-search-results-nuget.png)
+Es verwendet Microsoft Entra, um Benutzer zu authentifizieren, so dass es in deren Namen Daten aus der API zurückgeben kann.
 
-Sie verwendet Microsoft Entra zum Authentifizieren von Benutzerinnen und Benutzern, die es ermöglichen, Daten aus SharePoint Online mithilfe der Microsoft Graph-API in deren Namen zurückzugeben.
+Nachdem sich Benutzende authentifiziert haben, erhält Ihre Nachrichtenerweiterung Daten von der API und gibt Suchergebnisse zurück, die in Nachrichten und E-Mails als formatierte Karte eingebettet und dann weitergegeben werden können.
 
-![Screenshot einer Authentifizierungsaufforderung in einer suchbasierten Nachrichtenerweiterung. Es wird ein Link zur Anmeldung angezeigt.](../media/3-sign-in.png)
+![Screenshot der Suchergebnisse, die Daten aus einer externen API in Microsoft Teams verwenden.](../media/3-search-results-api.png)
 
-Nachdem sich die Benutzerinnen und Benutzer authentifiziert haben, erhält Ihre Messaging-Erweiterung Produktinformationen aus SharePoint Online mithilfe der Microsoft Graph-API. Sie gibt Suchergebnisse zurück, die als umfangreich formatierte Karte in Nachrichten und E-Mails eingebettet und dann freigegeben werden können.
+![Screenshot des Suchergebnisses, das in eine Nachricht in Microsoft Teams eingebettet ist.](../media/4-adaptive-card.png)
 
-![Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden. Die Suchergebnisse werden von SharePoint Online zurückgegeben. Jedes Suchergebnis zeigt den Produktnamen, die Kategorie und das Produktbild an.](../media/4-search-results-sharepoint-online.png)
+Es arbeitet mit Copilot für Microsoft 365 als Plugin zusammen, so dass es die Produktdaten im Namen des Benutzers abfragen und die zurückgegebenen Daten in seinen Antworten verwenden kann.
 
-![Screenshot des Suchergebnisses, das in eine Nachricht in Microsoft Teams eingebettet ist. Die Suchergebnisse werden als adaptive Karte mit Produktname, Kategorie, Anrufvolumen und Veröffentlichungsdatum angezeigt. Es wird eine Aktionsschaltfläche mit dem Titel „Ansicht“ angezeigt, über die Benutzende zum Produktlistenelement in SharePoint Online navigieren können.](../media/5-adaptive-card.png)
+![Screenshot einer Antwort in Copilot für Microsoft 365, die Informationen enthält, die vom Plug-In für die Nachrichtenerweiterung zurückgegeben wurden. Es wird eine adaptive Karte mit Produktinformationen angezeigt.](../media/5-copilot-answer.png)
 
-Sie funktioniert mit Copilot für Microsoft 365 als Plug-In, sodass sie die SharePoint Online-Liste im Namen der Benutzerinnen und Benutzer abfragen und die zurückgegebenen Daten in ihren Antworten verwenden kann.
-
-![Screenshot einer Antwort in Copilot für Microsoft 365, die Informationen enthält, die vom Plug-In für die Nachrichtenerweiterung zurückgegeben wurden. Es wird eine adaptive Karte mit Produktinformationen angezeigt.](../media/6-copilot-answer.png)
-
-Am Ende dieses Labs sind Sie in der Lage, in C# geschriebene Nachrichtenerweiterungen (die auf .NET laufen) zu erstellen. Sie kann in Microsoft Teams, Microsoft Outlook und Copilot für Microsoft 365 verwendet werden. Sie kann Daten hinter geschützten APIs abfragen und die Ergebnisse als umfangreich formatierte Karten zurückgeben.
+Am Ende dieses Moduls können Sie Messaging-Erweiterungen erstellen, die in C# geschrieben wurden (unter .NET ausgeführt). Sie kann in Microsoft Teams, Microsoft Outlook und Copilot für Microsoft 365 verwendet werden. Sie kann Daten hinter geschützten APIs abfragen und die Ergebnisse als umfangreich formatierte Karten zurückgeben.
 
 ## Voraussetzungen
 
@@ -39,8 +35,25 @@ Am Ende dieses Labs sind Sie in der Lage, in C# geschriebene Nachrichtenerweiter
 - Authentifizierungs-Grundkenntnisse 
 - Administratorzugriff auf einen Microsoft 365-Mandanten
 - Zugriff auf ein Azure-Abonnement
-- Der Zugriff auf Copilot für Microsoft 365 ist optional und nur erforderlich, um eine Übung abzuschließen
-- Visual Studio 2022 17.9 installiert mit [Teams Toolkit](/microsoftteams/platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-vs) (Microsoft Teams-Entwicklungstools-Komponente)
+- Der Zugriff auf Copilot für Microsoft 365 ist optional und nur erforderlich, um **Übung 4: Aufgabe 5** abzuschließen.
+- Visual Studio 2022 17.10 installiert mit [Teams Toolkit](/microsoftteams/platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-vs) (Microsoft Teams-Entwicklungstools-Komponente)
 - [.NET 8.0](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [Dev Proxy 0.19.1+](https://aka.ms/devproxy)
 
-Wenn Sie bereit sind, zu beginnen, [fahren Sie mit der nächsten Übung fort...](./2-exercise-create-a-message-extension.md)
+> [!NOTE]
+> Die einzige Übung in diesem Labor, die eine Microsoft 365 Copilot-Lizenz erfordert, ist **Übung 4: Aufgabe 5**. Bis zu diesem Punkt sollte alles getan werden, ob Ihr Mandant Copilot hat oder nicht.
+
+## Übungsdauer
+
+  - **Geschätzter Zeitaufwand**: 150 Minuten
+
+## Lernziele
+
+Nach Abschluss dieses Moduls sollten Sie folgende Aufgaben ausführen können:
+
+- Verstehen, was Nachrichtenerweiterungen sind und wie sie erstellt werden.
+- Erstellen einer Nachrichtenerweiterung.
+- Verstehen, wie man Benutzende mit Single Sign-on authentifiziert und eine benutzerdefinierte API aufruft, die durch die Microsoft Entra-Authentifizierung geschützt ist.
+- Verstehen, wie Sie Nachrichtenerweiterungen für die Verwendung mit Copilot für Microsoft 365 erweitern und optimieren können.
+
+Wenn Sie bereit sind zu beginnen, [fahren Sie mit der ersten Übung fort...](./2-exercise-create-a-message-extension.md)
