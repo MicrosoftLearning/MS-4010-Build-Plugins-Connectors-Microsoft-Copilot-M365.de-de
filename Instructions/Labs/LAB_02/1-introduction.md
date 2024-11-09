@@ -1,24 +1,29 @@
 ---
 lab:
   title: Einführung
-  module: 'LAB 02: Integrate external content with Copilot for Microsoft 365 using Microsoft Graph connectors built with .NET'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
 ---
 
 # Einführung
 
-Angenommen, Sie haben ein externes System, in dem Sie Wissensdatenbank-Artikel speichern. Diese Artikel enthalten Informationen über verschiedene Prozesse in Ihrem Unternehmen. Sie möchten in der Lage sein, relevante Informationen aus Microsoft 365 leicht zu finden und zu entdecken. Sie möchten auch, dass Copilot für Microsoft 365 Informationen aus diesen Wissendsdatenbank-Artikeln in seine Antworten einbezieht.
+In diesem Projekt lernen Sie, wie Sie Teams-Nachrichtenerweiterungen als Plug-Ins in Microsoft Copilot für Microsoft 365 verwenden. Das Projekt basiert auf dem Beispiel „Northwind Inventory“, das in diesem [GitHub-Repository](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) enthalten ist. Mit der bewährten [Northwind-Datenbank](https://learn.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) verfügen Sie über viele simulierte Unternehmensdaten, mit denen Sie arbeiten können.
 
-Um diese externen Informationen innerhalb von Microsoft 365 verfügbar zu machen, erstellen Sie einen benutzerdefinierten Microsoft Graph-Connector. Microsoft Graph-Connectors stellen eine Verbindung zu Ihrem externen System her (1), um Inhalte abzurufen, verwenden die Informationen von Microsoft Entra ID zur Authentifizierung bei Microsoft 365 (2) und importieren die Inhalte über die Microsoft Graph-API (3) in Microsoft 365.
+Northwind betreibt ein E-Commerce-Spezialitätengeschäft aus Spokane, Washington. In dieser Übung arbeiten Sie mit der Northwind Inventory-Anwendung, die Zugriff auf Produktbestand und Finanzinformationen bietet.
 
-![Diagramm, das die konzeptionelle Arbeit eines Microsoft Graph-Connectors zeigt.](../media/1-graph-connector-concept.png)
+Diese Übung dauert ca. **60** Minuten.
 
-In diesem Modul erfahren Sie, was Microsoft Graph-Connectors sind und warum Sie sie in Ihrer Organisation verwenden sollten. Sie erstellen einen Microsoft Graph-Connector, der lokale Markdowndateien in Microsoft 365 importiert. Sie erfahren auch, wie Sie sicherstellen können, dass die von Ihnen importierten externen Inhalte nur für Personen mit den entsprechenden Berechtigungen zugänglich sind. Schließlich optimieren Sie Ihren Microsoft Graph Connector für die Verwendung mit Copilot für Microsoft 365.
+## Vor der Installation
 
-## Voraussetzungen
+- [**Bereiten**](./2-prepare-development-environment.md) Sie sich zuerst vor, indem Sie Ihre Entwicklungsumgebung einrichten und die Anwendung ausführen.
 
-- C#-Grundkenntnisse
-- Authentifizierungs-Grundkenntnisse 
-- Zugriff auf einen [Microsoft 365-Mandanten](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn)
-- [.NET 8.0](https://dotnet.microsoft.com/download/dotnet/8.0)
+- In [**Übung 1**](./3-exercise-1-run-message-extension.md) führen Sie dieselbe Anwendung als eine [Nachrichtenerweiterung](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) in Microsoft Teams und Outlook aus.
 
-Wenn Sie bereit sind, zu beginnen, [fahren Sie mit der nächsten Übung fort...](./2-exercise-configure-connection-schema.md)
+- In [**Übung 2**](./4-exercise-2-run-copilot-plugin.md) führen Sie die Anwendung als Plug-In für Copilot für Microsoft 365 aus. Sie experimentieren mit verschiedenen Eingabeaufforderungen und beobachten, wie das Plug-In mithilfe verschiedener Parameter aufgerufen wird. Während Sie mit Copilot chatten, können Sie sich die Entwicklerkonsole ansehen, um Abfragen anzuzeigen, die er erstellt.
+
+- In [**Übung 3**](./5-exercise-3-add-new-command.md) erfahren Sie, wie Sie der Anwendung einen neuen Befehl hinzufügen, damit Sie die Plug-In-Funktionen erweitern und weitere Aufgaben ausführen können.
+
+  ![Screenshot einer adaptiven Karte, die ein Produkt anzeigt.](../media/1-00-product-card-only.png)
+
+- Schließlich gehen Sie [**in Übung 4**](./6-exercise-4-explore-plugin-source-code.md) auf eine Tour durch den Code, um zu sehen, wie es detaillierter funktioniert. Wenn Sie noch nicht über Copilot verfügen, funktioniert alles andere noch als Nachrichtenerweiterung für Microsoft 365.
+
+Wenn Sie bereit sind, [fahren Sie mit der nächsten Übung fort …](./2-prepare-development-environment.md)
