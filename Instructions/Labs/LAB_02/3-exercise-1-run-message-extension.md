@@ -1,7 +1,7 @@
 ---
 lab:
   title: Übung 1 - Führen Sie das Beispiel als Messaging-Erweiterung aus
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Übung 1 - Führen Sie das Beispiel als Messaging-Erweiterung aus
@@ -234,6 +234,6 @@ Der Code liest bei jeder Abfrage die Tabelle **Produkte**, aber auf die anderen 
 
 Nachdem Sie alle Aufgaben in dieser Übung ausgeführt haben, sollten Sie eine funktionierende Messaging-Erweiterungs-Anwendung haben, die als Microsoft 365-Plugin für Teams oder Outlook verwendet werden kann.
 
-Wenn alles funktioniert, sind Sie bereit, die Beispielanwendung in **Microsoft Copilot für Microsoft 365** auszuführen! 
+Wenn alles funktioniert, sind Sie bereit, die Beispielanwendung in **Microsoft 365 Copilot** auszuführen! 
 
 [Fahren Sie mit der nächsten Übung fort...](./4-exercise-2-run-copilot-plugin.md)

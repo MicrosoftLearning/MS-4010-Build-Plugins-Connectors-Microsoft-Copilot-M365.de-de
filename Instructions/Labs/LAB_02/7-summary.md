@@ -1,12 +1,12 @@
 ---
 lab:
   title: Zusammenfassung
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Zusammenfassung
 
-In diesem Modul haben Sie Ihre Entwicklungsumgebung für die Entwicklung von Messaging-Erweiterungs-Plug-Ins für Microsoft Copilot vorbereitet. Dazu gehört das Einrichten eines Microsoft 365-Kontos mit den erforderlichen Berechtigungen und Lizenzen, das Installieren von Visual Studio Code, NodeJS, Azure Storage-Explorer und das Teams-Toolkit für Visual Studio Code. Außerdem haben Sie gelernt, wie Sie ein Beispiel-Repository von GitHub klonen oder herunterladen und die Beispieldokumente auf Ihr OneDrive kopieren.
+In diesem Modul haben Sie Ihre Entwicklungsumgebung für die Entwicklung von Plugins für Messaging-Erweiterungen für Microsoft 365 Copilot vorbereitet. Dazu gehört das Einrichten eines Microsoft 365-Kontos mit den erforderlichen Berechtigungen und Lizenzen, das Installieren von Visual Studio Code, NodeJS, Azure Storage-Explorer und das Teams-Toolkit für Visual Studio Code. Außerdem haben Sie gelernt, wie Sie ein Beispiel-Repository von GitHub klonen oder herunterladen und die Beispieldokumente auf Ihr OneDrive kopieren.
 
 Während der Übungen haben Sie eine Anwendung als Plug-In für Teams und Outlook mit der Northwind-Datenbank ausgeführt, die in Azure Table Storage gespeichert ist. Sie haben die Anwendung mit einer Verbindungszeichenfolge erstellt, lokal mit Visual Studio Code ausgeführt und in Teams und Outlook getestet. Darüber hinaus haben Sie das Microsoft Teams-Messaging-Erweiterungs- und Copilot-Plug-In erweitert, indem Sie einen neuen Befehl hinzufügen, um Informationen zu den Kundinnen und Kunden von Northwind bereitzustellen.
 
@@ -14,7 +14,7 @@ Durch den Erwerb dieser neuen Fähigkeiten können Sie jetzt Copilot in Ihrer Or
 
 ## Ressourcen
 
-- [Erweiterung von Microsoft Copilot für Microsoft 365](https://learn.microsoft.com/microsoft-365-copilot/extensibility/)
+- [Erweitern ](https://learn.microsoft.com/microsoft-365-copilot/extensibility/)von Microsoft 365 Copilot
 
 - [Microsoft 365-Entwicklung](https://learn.microsoft.com/learn/modules/m365-setup-dev-environment/)
 

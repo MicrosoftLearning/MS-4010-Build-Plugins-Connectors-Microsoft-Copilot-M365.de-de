@@ -1,17 +1,17 @@
 ---
 lab:
   title: Übung 2 – Ausführen des Beispiels als Copilot-Plug-In
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Übung 2 – Ausführen des Beispiels als Copilot-Plug-In
 
-In dieser Übung führen Sie die Anwendung als Plug-In für Microsoft Copilot für Microsoft 365 aus. Sie experimentieren mit verschiedenen Eingabeaufforderungen und beobachten, wie das Plug-In mithilfe verschiedener Parameter aufgerufen wird.
+In dieser Übung führen Sie die Anwendung als Plugin für Microsoft Copilot für Microsoft 365 aus. Sie experimentieren mit verschiedenen Eingabeaufforderungen und beobachten, wie das Plug-In mithilfe verschiedener Parameter aufgerufen wird.
 
 > [!NOTE]  
-> Um die folgende Übung auszuführen, muss Ihr Konto über eine gültige Lizenz für Copilot für Microsoft 365 verfügen.
+> Um die folgende Übung durchzuführen, muss Ihr Konto über eine gültige Lizenz für Microsoft 365 Copilot verfügen.
 
-## Aufgabe 1 – Test in Microsoft Copilot für Microsoft 365 (einzelner Parameter)
+## Aufgabe 1 - Test in Microsoft 365 Copilot (einzelner Parameter)
 
 1. Wählen Sie in der Anwendungsschiene auf der linken Seite die **Copilot**-App aus.
 
@@ -45,7 +45,7 @@ Probieren Sie diese adaptiven Karten aus, um Maßnahmen für die Produkte zu erg
 
 Versuchen Sie, Ihre eigenen Eingabeaufforderungen zu erstellen. Sie werden feststellen, dass sie nur funktionieren, wenn Copilot das Plug-In nach den erforderlichen Informationen abfragen kann. Dies unterstreicht die Notwendigkeit, die Arten von Eingabeaufforderungen zu antizipieren, die Benutzerinnen und Benutzer ausgeben werden, und entsprechende Abfragetypen für jede Anfrage bereitzustellen. Wenn Sie mehrere Parameter haben, wird dies effizienter!
 
-## Aufgabe 2 – Test in Microsoft Copilot für Microsoft 365 (mehrere Parameter)
+## Aufgabe 2 - Test in Microsoft 365 Copilot (mehrere Parameter)
 
 In dieser Übung probieren Sie einige Eingabeaufforderungen aus, die das Feature mit mehreren Parametern im Beispiel-Plug-In nutzen. Diese Eingabeaufforderungen fordern Daten an, die nach **Name**, **Kategorie**, **Bestandsstatus**, **Lieferantenstadt** und **Lagerbestand** abgerufen werden können, wie im **App-Manifest** definiert.
 
@@ -111,7 +111,7 @@ Wie Sie sehen können, haben wir unter der von Copilot generierten Antwort eine 
 
 ## Arbeit überprüfen
 
-Nachdem Sie die Aufgaben in dieser Übung abgeschlossen haben, sollten Sie in der Lage sein, das **Northwind Inventory** Plugin in Copilot für Microsoft 365 zu verwenden. 
+Nachdem Sie die Aufgaben in dieser Übung erledigt haben, sollten Sie in der Lage sein, das **Northwind Inventory**-Plugin in Microsoft 365 Copilot zu verwenden. 
 
 Wenn Sie diese Übung abgeschlossen haben, können Sie der Messaging-Erweiterung einen neuen Befehl hinzufügen, um die Möglichkeiten des Plugins zu erweitern und weitere Aufgaben auszuführen. 
 

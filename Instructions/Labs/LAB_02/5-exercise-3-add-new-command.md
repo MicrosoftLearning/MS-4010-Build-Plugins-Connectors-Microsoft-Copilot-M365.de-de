@@ -1,12 +1,12 @@
 ---
 lab:
   title: Übung 3 – Hinzufügen eines neuen Befehls
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Übung 3 – Hinzufügen eines neuen Befehls
 
-In dieser Übung werden Sie die Teams Messaging-Erweiterung und das Copilot-Plug-In, um einen neuen Befehl erweitern. Die derzeitige Messaging-Erweiterung liefert zwar Informationen über die Produkte in der Northwind-Bestandsdatenbank, aber keine Informationen über die Kundschaft von Northwind. Sie werden einen neuen Befehl einführen, der mit einem API-Aufruf verbunden ist und Produkte abruft, die nach einem vom Benutzenden angegebenen Kundennamen bestellt wurden. Diese Übung setzt voraus, dass Sie mindestens die Übungen 1, 2 und 3 abgeschlossen haben. Sie können Übung 4 überspringen, wenn Sie keine Copilot für Microsoft 365-Lizenz haben.
+In dieser Übung werden Sie die Teams Messaging-Erweiterung und das Copilot-Plug-In, um einen neuen Befehl erweitern. Die derzeitige Messaging-Erweiterung liefert zwar Informationen über die Produkte in der Northwind-Bestandsdatenbank, aber keine Informationen über die Kundschaft von Northwind. Sie werden einen neuen Befehl einführen, der mit einem API-Aufruf verbunden ist und Produkte abruft, die nach einem vom Benutzenden angegebenen Kundennamen bestellt wurden. Diese Übung setzt voraus, dass Sie mindestens die Übungen 1, 2 und 3 abgeschlossen haben. Sie können Übung 4 überspringen, wenn Sie keine Microsoft 365 Copilot-Lizenz haben.
 
 Um dies zu erreichen, gehen wir die folgenden Aufgaben durch:
 
@@ -232,7 +232,7 @@ Informationen zum Ablauf einer Abfrage:
 
 ## Aufgabe 5 - Führen Sie die App aus! Suchen nach Produkt nach Firmenname
 
-Jetzt können Sie das Beispiel als Plug-In für Copilot für Microsoft 365 testen.
+Jetzt sind Sie bereit, das Beispiel als Plugin für Microsoft 365 Copilot zu testen.
 
 1. Entfernen Sie die App **Nordwest-Inventory** in Teams. Diese Aufgabe ist erforderlich, da Sie das Manifest aktualisieren. Für Manifestupdates muss die App neu installiert werden. Der sauberste Weg, dies zu tun, ist, sie zunächst aus den Teams zu entfernen.
 

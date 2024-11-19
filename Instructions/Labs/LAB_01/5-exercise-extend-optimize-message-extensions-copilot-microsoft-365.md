@@ -1,14 +1,14 @@
 ---
 lab:
   title: Übung 4 – Erweitern und Optimieren von Nachrichtenerweiterungen für die Verwendung mit Copilot für Microsoft 365
-  module: 'LAB 01: Connect Copilot for Microsoft 365 to your external data in real-time with message extension plugins built with .NET and Visual Studio'
+  module: 'LAB 01: Connect Microsoft 365 Copilot to your external data in real-time with message extension plugins built with .NET and Visual Studio'
 ---
 
 # Übung 4 – Erweitern und Optimieren von Nachrichtenerweiterungen für die Verwendung mit Copilot für Microsoft 365
 
-In dieser Übung erweitern und optimieren Sie Ihre Nachrichtenerweiterung für die Verwendung mit Copilot für Microsoft 365. Sie fügen einen neuen Parameter namens Zielgruppe hinzu und aktualisieren die Nachrichtenerweiterungslogik, um mehrere Parameter zu verarbeiten. Zum Schluss debuggen Sie Ihre Nachrichtenerweiterung und testen sie in Copilot in Microsoft Teams.
+In dieser Übung erweitern und optimieren Sie die Nachrichtenerweiterung für die Verwendung mit Copilot für Microsoft 365. Sie fügen einen neuen Parameter namens Zielgruppe hinzu und aktualisieren die Nachrichtenerweiterungslogik, um mehrere Parameter zu verarbeiten. Zum Schluss debuggen Sie Ihre Nachrichtenerweiterung und testen sie in Copilot in Microsoft Teams.
 
-![Screenshot einer Antwort in Copilot für Microsoft 365, die Informationen enthält, die vom Plug-In für die Nachrichtenerweiterung zurückgegeben wurden. Es wird eine adaptive Karte mit Produktinformationen angezeigt.](../media/5-copilot-answer.png)
+![Screenshot einer Antwort in Microsoft 365 Copilot, die Informationen enthält, die vom Plugin für Messaging-Erweiterungen zurückgegeben wurden. Es wird eine adaptive Karte mit Produktinformationen angezeigt.](../media/5-copilot-answer.png)
 
 > [!NOTE]
 > Die einzige Aufgabe in dieser Übung, die eine Microsoft 365 Copilot-Lizenz erfordert, ist Aufgabe 5. Die vorherigen Aufgaben sollten ausgeführt werden, unabhängig davon, ob Ihr Mandant Über Copilot verfügt oder nicht.
@@ -212,21 +212,21 @@ Starten Sie anschließend eine Debug-Sitzung in Visual Studio:
 
 1. Schalten Sie in der Liste der Plugins das Plugin **Contoso-Produkte** ein, um es zu aktivieren.
 
-    ![Screenshot von Copilot für Microsoft 365 in Microsoft Teams mit aktiviertem Contoso-Produkt-Plug-In.](../media/20-copilot-plugin-enabled.png)
+    ![Screenshot von Microsoft 365 Copilot in Microsoft Teams mit aktiviertem Contoso-Produkt-Plugin.](../media/20-copilot-plugin-enabled.png)
 
 1. Geben Sie **Finden Sie Contoso-Produkte für Privatpersonen** als Ihre Nachricht ein und senden Sie sie ab.
 
 1. Warten Sie, bis Copilot antwortet:
 
-    ![Screenshot von Copilot für Microsoft 365 in Microsoft Teams mit der angezeigten Copilot-Nachricht bei der Verarbeitung der Anforderung des Benutzenden.](../media/21-copilot-thinking.png)
+    ![Screenshot von Microsoft 365 Copilot in Microsoft Teams mit der Copilot-Meldung, die während der Bearbeitung der Benutzeranfrage angezeigt wird.](../media/21-copilot-thinking.png)
 
 1. In der Copilot-Antwort werden die in der Plugin-Antwort zurückgegebenen Daten angezeigt und das Plugin wird in der Antwort referenziert:
 
-    ![Screenshot einer Antwort in Copilot für Microsoft 365, die Informationen enthält, die vom Plug-In für die Nachrichtenerweiterung zurückgegeben wurden. Es wird eine adaptive Karte mit Produktinformationen angezeigt.](../media/5-copilot-answer.png)
+    ![Screenshot einer Antwort in Microsoft 365 Copilot, die Informationen enthält, die vom Plugin für Messaging-Erweiterungen zurückgegeben wurden. Es wird eine adaptive Karte mit Produktinformationen angezeigt.](../media/5-copilot-answer.png)
 
 1. Um die für das Ergebnis relevante adaptive Karte anzuzeigen, bewegen Sie den Mauszeiger über die Referenzen in der Copilot-Antwort:
 
-    ![Screenshot von Copilot für Microsoft 365 in Microsoft Teams zeigt eine adaptive Karte mit angezeigten Produktinformationen. Die Karte wird angezeigt, wenn der Benutzer in der Copilot-Antwort auf einen Verweis zeigt.](../media/22-copilot-reference.png)
+    ![Screenshot von Microsoft 365 Copilot in Microsoft Teams mit einer adaptiven Karte, auf der Produktinformationen angezeigt werden. Die Karte wird angezeigt, wenn der Benutzer in der Copilot-Antwort auf einen Verweis zeigt.](../media/22-copilot-reference.png)
 
 Kehren Sie zu Visual Studio zurück und wählen Sie **Anhalten** aus der Symbolleiste aus oder drücken Sie <kbd>Umschalt</kbd> + <kbd>F5</kbd>, um die Debug-Sitzung zu beenden. Schalten Sie außerdem Dev Proxy mit <kbd>Strg</kbd> + <kbd>C</kbd> aus.
 
