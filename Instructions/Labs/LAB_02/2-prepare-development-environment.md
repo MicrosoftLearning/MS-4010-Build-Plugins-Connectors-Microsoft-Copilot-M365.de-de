@@ -1,7 +1,7 @@
 ---
 lab:
   title: Vorbereiten Ihrer Entwicklungsumgebung
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft Copilot'
+  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
 ---
 
 # Vorbereiten Ihrer Entwicklungsumgebung
@@ -11,7 +11,7 @@ Zunächst sollten Sie Ihre Entwicklungsumgebung, Ihre Konten und Ihre Software v
 ## Aufgabe 1 - Voraussetzungen installieren
 
 > [!IMPORTANT]
-> Um dieses Projekt erfolgreich abzuschließen, benötigen Sie ein Microsoft 365-Konto mit der Berechtigung zum Hochladen von Anwendungen. Um **Übung 2** abzuschließen, muss das Konto auch für Microsoft Copilot für Microsoft 365 lizenziert sein.
+> Um dieses Projekt erfolgreich abzuschließen, benötigen Sie ein Microsoft 365-Konto mit der Berechtigung zum Hochladen von Anwendungen. Um **Übung 2** abzuschließen, muss das Konto auch für Microsoft 365 Copilot lizenziert sein.
 
 Wenn Sie einen neuen Mandanten verwenden, ist es eine gute Idee, sich auf der [Microsoft 365-Seite](https://office.com) unter [https://office.com](https://office.com) anzumelden, bevor Sie beginnen. Je nachdem, wie der Mandant konfiguriert ist, werden Sie möglicherweise aufgefordert, eine Mulit-Faktor-Authentifizierung einzurichten. Stellen Sie sicher, dass Sie auf Microsoft Teams und Microsoft Outlook zugreifen können, bevor Sie fortfahren.
 

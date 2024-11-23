@@ -1,7 +1,7 @@
 ---
 lab:
   title: Übung 2 – Einmaliges Anmelden hinzufügen
-  module: 'LAB 01: Connect Copilot for Microsoft 365 to your external data in real-time with message extension plugins built with .NET and Visual Studio'
+  module: 'LAB 01: Connect Microsoft 365 Copilot to your external data in real-time with message extension plugins built with .NET and Visual Studio'
 ---
 
 # Übung 2 – Einmaliges Anmelden hinzufügen
@@ -244,7 +244,7 @@ Als nächstes aktualisieren Sie den Bot-Code, um den Namen der Verbindungseinste
 
 1. Öffnen Sie im Ordner **Suchen** die Datei **SearchApp.cs**
 
-1. Erstellen Sie am Anfang der Klasse **SearchApp** einen Konstruktor, der ein **IConfiguration** Objekt akzeptiert und den Wert der Eigenschaft **CONNECTION_NAME** einem privaten Feld namens **Verbindungsname** zuweist:
+1. Erstellen Sie am Anfang der Klasse **SearchApp** (etwa in Zeile 14) einen Konstruktor, der ein **IConfiguration**-Objekt akzeptiert und den Wert der Eigenschaft **CONNECTION_NAME** einem privaten Feld namens **connectionName** zuweist:
 
     ```csharp
     private readonly string connectionName;
