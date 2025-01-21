@@ -1,29 +1,34 @@
 ---
 lab:
   title: Einführung
-  module: 'LAB 02: Build your own message extension plugin with TypeScript (TS) for Microsoft 365 Copilot'
+  module: 'LAB 02: Build your first action for declarative agents with API plugin by using Visual Studio Code'
 ---
 
 # Einführung
 
-In diesem Projekt lernen Sie die Verwendung von Teams Messaging-Erweiterungen als Plugins in Microsoft 365 Copilot. Das Projekt basiert auf dem Beispiel „Northwind Inventory“, das in diesem [GitHub-Repository](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) enthalten ist. Mit der bewährten [Northwind-Datenbank](https://learn.microsoft.com/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases) verfügen Sie über viele simulierte Unternehmensdaten, mit denen Sie arbeiten können.
+Mit Microsoft 365 Copilot-Agents können Sie KI-gestützte Assistenten erstellen, die für bestimmte Szenarien optimiert sind. Mithilfe von Anweisungen definieren Sie den Kontext für den Agent und geben Einstellungen an, z. B. Tonfall oder Reaktionsweise. Indem Sie die Fähigkeiten des Agents konfigurieren, können Sie mit externen Systemen interagieren, bestimmte Verhaltensweisen unter Systembedingungen auslösen oder benutzerdefinierte Workflowlogik verwenden. Eine Art von Fähigkeiten sind Aktionen, die es einem deklarativen Agent ermöglichen, mit APIs zu kommunizieren, um Daten abzurufen und zu ändern.
 
-Northwind betreibt ein E-Commerce-Spezialitätengeschäft aus Spokane, Washington. In dieser Übung arbeiten Sie mit der Northwind Inventory-Anwendung, die Zugriff auf Produktbestand und Finanzinformationen bietet.
+![Diagramm, das die Anatomie eines deklarativen Agents für Microsoft 365 Copilot zeigt.](../media/LAB_02/1-anatomy-declarative-agent.png)
 
-Diese Übung dauert ca. **60** Minuten.
+## Beispielszenario
 
-## Vor der Installation
+Angenommen, Sie arbeiten in einer Organisation, in der Sie regelmäßig Lebensmittel aus einem lokalen Restaurant bestellen. Das Restaurant arbeitet mit einem täglichen Menü, das sie im Internet veröffentlichen. Sie möchten schnell sehen können, welche Kurse verfügbar sind, aber auch Allergene für den Fall, dass Sie Gäste haben. Das Restaurant macht ihr Menü über eine API verfügbar. Anstatt eine separate App zu erstellen, möchten Sie die Informationen in Microsoft 365 Copilot integrieren, damit Sie die verfügbaren Gerichte, die Sie bestellen können, leicht finden und ihre Zutaten herausfinden können. Sie möchten natürliche Sprache verwenden, um durch das Menü und die Bestellung zu navigieren.
 
-- [**Bereiten**](./2-prepare-development-environment.md) Sie sich zuerst vor, indem Sie Ihre Entwicklungsumgebung einrichten und die Anwendung ausführen.
+## Wie werden wir vorgehen?
 
-- In [**Übung 1**](./3-exercise-1-run-message-extension.md) führen Sie dieselbe Anwendung als eine [Nachrichtenerweiterung](https://learn.microsoft.com/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) in Microsoft Teams und Outlook aus.
+In diesem Modul erstellen Sie eine Aktion für einen deklarativen Agent mit einem API-Plug-In. Die Aktion ermöglicht es dem Agent, mithilfe seiner anonymen API mit einem externen System zu interagieren. Folgendes wird beschrieben:
 
-- In [**Übung 2**](./4-exercise-2-run-copilot-plugin.md) werden Sie die Anwendung als Plugin für Microsoft 365 Copilot ausführen. Sie experimentieren mit verschiedenen Eingabeaufforderungen und beobachten, wie das Plug-In mithilfe verschiedener Parameter aufgerufen wird. Während Sie mit Copilot chatten, können Sie sich die Entwicklerkonsole ansehen, um Abfragen anzuzeigen, die er erstellt.
+- **Erstellen**: Erstellen Sie ein API-Plug-In, das eine Verbindung zu einer anonymen API herstellt.
+- **Konfigurieren**: Konfigurieren Sie das API-Plug-In, um die Daten aus der API anzuzeigen.
+- **Erweitern**: Erweitern Sie einen deklarativen Agent mit einer Aktion unter Verwendung eines API-Plug-Ins.
+- **Bereitstellung**: Laden Sie Ihren deklarativen Agent in Microsoft 365 Copilot hoch und validieren Sie die Ergebnisse.
 
-- In [**Übung 3**](./5-exercise-3-add-new-command.md) erfahren Sie, wie Sie der Anwendung einen neuen Befehl hinzufügen, damit Sie die Plug-In-Funktionen erweitern und weitere Aufgaben ausführen können.
+![Screenshot eines deklarativen Agents, der auf einen Benutzer bzw. auf eine Benutzerin mit Informationen aus einer externen API reagiert.](../media/LAB_02/1-agent-response-api-plugin.png)
 
-  ![Screenshot einer adaptiven Karte, die ein Produkt anzeigt.](../media/1-00-product-card-only.png)
+## Übungsdauer
 
-- Schließlich gehen Sie [**in Übung 4**](./6-exercise-4-explore-plugin-source-code.md) auf eine Tour durch den Code, um zu sehen, wie es detaillierter funktioniert. Wenn Sie noch nicht über Copilot verfügen, funktioniert alles andere noch als Nachrichtenerweiterung für Microsoft 365.
+- **Geschätzter Zeitaufwand**: 35 Minuten
 
-Wenn Sie bereit sind, [fahren Sie mit der nächsten Übung fort …](./2-prepare-development-environment.md)
+## Lernziele
+
+Am Ende dieses Moduls wissen Sie, wie Sie deklarative Agents mit API-Plug-Ins integrieren, die mit anonymen APIs verbunden sind, damit sie in Echtzeit mit externen Systemen interagieren können.
