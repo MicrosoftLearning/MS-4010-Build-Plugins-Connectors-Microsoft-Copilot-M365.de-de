@@ -1,59 +1,43 @@
 ---
 lab:
   title: Einführung
-  module: 'LAB 01: Connect Microsoft 365 Copilot to your external data in real-time with message extension plugins built with .NET and Visual Studio'
+  module: 'LAB 01: Build a declarative agent for Microsoft 365 Copilot using Visual Studio Code'
 ---
 
 # Einführung
 
-Mithilfe von Messaging-Erweiterungen können Benutzerinnen und Benutzer mit externen Systemen aus Microsoft Teams und Microsoft Outlook arbeiten. Die Benutzer können Nachrichtenerweiterungen verwenden, um Daten aus diesen Systemen in Nachrichten und E-Mails nachzuschlagen, zu ändern und weiterzugeben, und zwar in Form einer formatierten Karte.
+Verwenden Sie deklarative Agenten, um Microsoft 365 Copilot zu erweitern. Sie definieren benutzerdefinierte Kenntnisse zum Erstellen von Agents, die Fragen mithilfe autoritativer Inhalte beantworten können.
 
-Angenommen, Sie haben eine benutzerdefinierte API, die Sie für den Zugriff auf Produktinformationen verwenden, die aktuell und für Ihre Organisation relevant sind. Sie möchten diese Informationen in Microsoft 365 suchen und freigeben. Sie möchten auch, dass Microsoft 365 Copilot diese Informationen in seinen Antworten verwendet.
+## Beispielszenario
 
-In diesem Modul erstellen Sie eine Messaging-Erweiterung. Ihre Messaging-Erweiterung verwendet einen Bot, um mit Microsoft Teams, Microsoft Outlook und Microsoft 365 Copilot zu kommunizieren.
+Nehmen wir an, Sie arbeiten in einem Kundendienstteam. Sie und Ihr Team verarbeiten Abfragen zu Produkten, die Ihre Organisation von der Kundschaft erhält. Sie möchten die Antwortzeiten verbessern und eine bessere Erfahrung bieten. Sie speichern Dokumente in einer Dokumentenbibliothek auf einer SharePoint Online-Website, die Produktspezifikationen, häufig gestellte Fragen und Richtlinien für die Bearbeitung von Reparaturen, Rücksendungen und Garantien enthält. Sie möchten in der Lage sein, Informationen in diesen Dokumenten mithilfe natürlicher Sprache abzufragen und schnell Antworten auf Abfragen der Kundschaft zu erhalten.
 
-![Screenshot der Suchergebnisse, die von einer suchbasierten Messaging-Erweiterung in Microsoft Teams zurückgegeben werden.](../media/1-search-results.png)
+## Wie werden wir vorgehen?
 
-Es verwendet Microsoft Entra, um Benutzer zu authentifizieren, so dass es in deren Namen Daten aus der API zurückgeben kann.
+Hier erstellen Sie einen deklarativen Agent, der Fragen zum Produktsupport mithilfe von Informationen beantworten kann, die in Dokumenten in Microsoft 365 gespeichert sind:
 
-Nachdem sich Benutzende authentifiziert haben, erhält Ihre Nachrichtenerweiterung Daten von der API und gibt Suchergebnisse zurück, die in Nachrichten und E-Mails als formatierte Karte eingebettet und dann weitergegeben werden können.
-
-![Screenshot der Suchergebnisse, die Daten aus einer externen API in Microsoft Teams verwenden.](../media/3-search-results-api.png)
-
-![Screenshot des Suchergebnisses, das in eine Nachricht in Microsoft Teams eingebettet ist.](../media/4-adaptive-card.png)
-
-Es arbeitet mit Microsoft 365 Copilot als Plugin zusammen, so dass es die Produktdaten im Namen des Benutzenden abfragen und die zurückgegebenen Daten in seinen Antworten verwenden kann.
-
-![Screenshot einer Antwort in Microsoft 365 Copilot, die Informationen enthält, die vom Plugin für Messaging-Erweiterungen zurückgegeben wurden. Es wird eine adaptive Karte mit Produktinformationen angezeigt.](../media/5-copilot-answer.png)
-
-Am Ende dieses Moduls können Sie Messaging-Erweiterungen erstellen, die in C# geschrieben wurden (unter .NET ausgeführt). Es kann in Microsoft Teams, Microsoft Outlook und Microsoft 365 Copilot verwendet werden. Sie kann Daten hinter geschützten APIs abfragen und die Ergebnisse als umfangreich formatierte Karten zurückgeben.
+- **Erstellen**: Erstellen Sie ein deklaratives Agentprojekt und verwenden Sie das Teams-Toolkit in Visual Studio Code.
+- **Individuell angepasste Anweisungen**: Formen Sie Antworten durch das Definieren von individuell angepassten Anweisungen.
+- **Individuell angepasstes Grounding**: Fügen Sie dem Agent zusätzlichen Kontext hinzu, indem Sie die Grounding-Daten konfigurieren.
+- **Unterhaltungseinstiegmöglichkeiten**: Definieren Sie Eingabeaufforderungen zum Starten neuer Unterhaltungen.
+- **Bereitstellung**: Laden Sie Ihren deklarativen Agent in Microsoft 365 Copilot hoch und validieren Sie die Ergebnisse.
 
 ## Voraussetzungen
 
-- C#-Grundkenntnisse
-- Bicep-Grundkenntnisse
-- Authentifizierungs-Grundkenntnisse 
-- Administratorzugriff auf einen Microsoft 365-Mandanten
-- Zugriff auf ein Azure-Abonnement
-- Der Zugriff auf Microsoft 365 Copilot ist optional und nur für die Durchführung von **Übung 4: Aufgabe 5** erforderlich.
-- Visual Studio 2022 17.10 installiert mit [Teams Toolkit](/microsoftteams/platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-vs) (Microsoft Teams-Entwicklungstools-Komponente)
-- [.NET 8.0](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Dev Proxy 0.19.1+](https://aka.ms/devproxy)
-
-> [!NOTE]
-> Die einzige Übung in diesem Labor, die eine Microsoft 365 Copilot-Lizenz erfordert, ist **Übung 4: Aufgabe 5**. Bis zu diesem Punkt sollte alles getan werden, ob Ihr Mandant Copilot hat oder nicht.
+- Grundlegende Kenntnisse darüber, was Microsoft 365 Copilot ist und wie es funktioniert
+- Grundlegende Kenntnisse darüber, was ein deklarativer Agent für Microsoft 365 Copilot ist
+- Microsoft 365-Mandant mit Microsoft 365 Copilot
+- Konto mit Rechten zum Hochladen von individuell angepassten Apps in Microsoft Teams
+- Zugriff auf einen Microsoft 365-Mandanten mit Microsoft 365 Copilot
+- [Visual Studio Code](https://code.visualstudio.com/) mit der installierten Erweiterung [Teams-Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+- [Node.js v18](https://nodejs.org/en/download/package-manager)
 
 ## Übungsdauer
 
-  - **Geschätzter Zeitaufwand**: 150 Minuten
+- **Geschätzter Zeitaufwand**: 30 Minuten
 
 ## Lernziele
 
-Nach Abschluss dieses Moduls sollten Sie folgende Aufgaben ausführen können:
+Am Ende dieses Moduls sind Sie in der Lage, einen deklarativen Agent zu erstellen, ihn in Microsoft 365 hochzuladen und ihn dann in Microsoft 365 Copilot zu verwenden, um die Ergebnisse zu validieren.
 
-- Verstehen, was Nachrichtenerweiterungen sind und wie sie erstellt werden.
-- Erstellen einer Nachrichtenerweiterung.
-- Verstehen, wie man Benutzende mit Single Sign-on authentifiziert und eine benutzerdefinierte API aufruft, die durch die Microsoft Entra-Authentifizierung geschützt ist.
-- Verstehen der Erweiterung und Optimierung von Nachrichtenerweiterungen für die Verwendung mit Copilot für Microsoft 365
-
-Wenn Sie bereit sind zu beginnen, [fahren Sie mit der ersten Übung fort...](./2-exercise-create-a-message-extension.md)
+Wenn Sie bereit sind zu beginnen, [fahren Sie mit der ersten Übung fort...](./2-exercise-create-declarative-agent.md)
