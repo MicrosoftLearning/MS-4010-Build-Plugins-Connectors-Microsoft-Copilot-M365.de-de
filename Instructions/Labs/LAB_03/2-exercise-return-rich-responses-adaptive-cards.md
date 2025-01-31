@@ -41,10 +41,10 @@ In Visual Studio Code:
   }
   ```
 
-1. Bevor Sie fortfahren, suchen Sie auf der Registerkarte **Erweiterungen** der Aktivitätsleiste nach der Erweiterung **Vorschau für adaptive Karten** und installieren diese:
+1. Bevor Sie fortfahren, suchen Sie auf der Registerkarte **Erweiterungen** der Aktivitätsleiste nach der Erweiterung **Vorschau für adaptive Karten** und installieren diese. Erstellen Sie dann eine Datendatei für die adaptive Karte:
   1. Öffnen Sie die Befehlspalette, indem Sie <kbd>STRG</kbd>+<kbd>P</kbd> auf der Tastatur drücken. Geben Sie `>Adaptive` ein, um Befehle für die Arbeit mit adaptiven Karten zu finden.
 
-    ![Screenshot von Visual Studio Code mit Befehlen zum Arbeiten mit adaptiven Karten.](../media/LAB_03/LAB_03/3-visual-studio-code-adaptive-card-commands.png)
+    ![Screenshot von Visual Studio Code mit Befehlen zum Arbeiten mit adaptiven Karten.](../media/LAB_03/3-visual-studio-code-adaptive-card-commands.png)
 
   1. Wählen Sie aus der Liste **Adaptive Karte: Neue Datendatei**. Visual Studio Code erstellt eine neue Datei namens **dish.data.json**.
   1. Ersetzen Sie seinen Inhalt durch Daten, die ein Gericht darstellen:
@@ -68,7 +68,7 @@ In Visual Studio Code:
 1. Wechseln Sie zurück zur Datei **dish.json**.
 1. Wählen Sie aus dem Menüpunkt **Vorschau für adaptive Karten** aus.
 
-  ![Screenshot von Visual Studio Code mit der Vorschau für adaptive Karten.](../media/LAB_03/LAB_03/3-visual-studio-code-adaptive-card-preview.png)
+  ![Screenshot von Visual Studio Code mit der Vorschau für adaptive Karten.](../media/LAB_03/3-visual-studio-code-adaptive-card-preview.png)
 
   Visual Studio Code öffnet eine Vorschau der Karte an der Seite. Während Sie die Karte bearbeiten, sind Ihre Änderungen sofort auf der Seite sichtbar.
 
