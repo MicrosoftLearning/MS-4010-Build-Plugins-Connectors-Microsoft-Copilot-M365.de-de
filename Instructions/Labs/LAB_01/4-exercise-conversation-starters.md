@@ -114,7 +114,7 @@ Als Nächstes testen Sie Ihren deklarativen Agent in Microsoft 365 und validiere
 
 Fortsetzen im Webbrowser:
 
-1. Wählen Sie in **Microsoft 365 Copilot** das Symbol oben rechts, um das Bedienfeld **Copilot** zu erweitern.
+1. Wählen Sie in **Microsoft 365 Copilot** das Symbol oben rechts aus, um den **Copilot-Seitenbereich zu erweitern**.
 1. Suchen Sie die Option **Produktsupport** in der Liste der Agents und wählen Sie sie aus, um das immersive Erlebnis zu betreten und direkt mit dem Agent zu chatten. Beachten Sie, dass die von Ihnen im Manifest definierten Gesprächseinstiegen in der Benutzeroberfläche angezeigt werden.
 
 ![Screenshot von Microsoft Edge, der den deklarativen Agent für Produktsupport in der immersiven Erfahrung mit benutzerdefinierten Gesprächseinstiegen zeigt.](../media/LAB_01/test-conversation-starters.png)
