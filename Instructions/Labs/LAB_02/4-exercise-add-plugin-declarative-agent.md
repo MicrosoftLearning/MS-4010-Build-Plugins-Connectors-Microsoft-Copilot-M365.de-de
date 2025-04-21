@@ -59,7 +59,7 @@ In Visual Studio Code:
 1. Aktualisieren Sie die Informationen des deklarativen Agents:
     1. Öffnen Sie die Datei **appPackage/declarativeAgent.json**.
     1. Aktualisieren Sie den Wert der Eigenschaft **name** in **Il Ristorante**.
-    1. Aktualisieren Sie den Wert der Eigenschaft **description** in **Order the most delicious Italian dishes and drinks from the comfort of your desk.**.
+    1. Aktualisieren Sie den Wert der Eigenschaft **description** auf **Bestellen Sie die köstlichsten italienischen Gerichte und Getränke bequem von Ihrem Schreibtisch aus.**
     1. Speichern Sie die Änderungen.
 1. Aktualisieren Sie die Anweisungen des deklarativen Agents:
     1. Öffnen Sie die Datei **appPackage/instruction.txt**.
@@ -122,6 +122,7 @@ In Visual Studio Code:
     > Um die Formatierung beizubehalten, müssen Sie möglicherweise mehrere Kopier-/Einfügevorgänge in Editor ausführen, bevor Sie in Visual Studio Code kopieren.
 
     1. Speichern Sie die Änderungen.
+
 1. Fügen Sie Gesprächseinstiege hinzu, um Benutzenden zu helfen, zu verstehen, wofür sie den Agent verwenden können:
     1. Öffnen Sie die Datei **appPackage/declarativeAgent.json**.
     1. Fügen Sie nach der Eigenschaft **instructions** eine neue Eigenschaft mit dem Namen **conversation_starters** hinzu:
