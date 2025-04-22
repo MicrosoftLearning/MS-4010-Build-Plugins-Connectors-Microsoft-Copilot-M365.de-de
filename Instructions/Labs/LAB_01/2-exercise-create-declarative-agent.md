@@ -18,7 +18,16 @@ Ein deklarativer Agent wird in einer Microsoft 365-App implementiert. Sie erstel
 
 - **Geschätzter Zeitaufwand**: 15 Minuten
 
-## Aufgabe 1 -- Herunterladen des Startprojekts
+## Aufgabe 1: Aktivieren von benutzerdefinierten App-Uploads in Teams Admin Center
+
+Um deklarative Agents über das Teams-Toolkit in Microsoft 365 hochzuladen, müssen Sie **Benutzerdefinierte App-Uploads** im Teams Admin Center aktivieren.
+
+1. Navigieren Sie zu Teams-Apps > App-Einrichtungsrichtlinien im Teams-Administrationszentrum oder gehen Sie direkt zu [App-Einrichtungsrichtlinien](https://admin.teams.microsoft.com/policies/app-setup).
+1. Wählen Sie **Global (Org-weiter Standard)** aus der Liste der Richtlinien.
+1. Aktivieren Sie **Benutzerdefinierte Anwendungen hochladen**.
+1. Wählen Sie **Speichern** und dann **Bestätigen** Sie Ihre Wahl.
+
+## Aufgabe 2 :Herunterladen des Startprojekts
 
 Laden Sie zunächst das Beispielprojekt von GitHub in einem Webbrowser herunter:
 
@@ -33,7 +42,7 @@ Das Startprojekt enthält ein Teams Toolkit-Projekt, das einen deklarativen Agen
 
 ![Screenshot von Visual Studio Code, der die Readme-Datei und Ordnerstruktur des Startprojekts in der Explorer-Ansicht zeigt.](../media/LAB_01/create-complete.png)
 
-## Aufgabe 2 – Untersuchen des deklarativen Agenten-Manifests
+## Aufgabe 3: Untersuchen des deklarativen Agenten-Manifests
 
 Sehen wir uns die Manifestdatei des deklarativen Agents an:
 
@@ -57,13 +66,13 @@ Der Wert der Eigenschaft **Anweisungen** enthält einen Verweis auf eine Datei n
     You are a declarative agent and were created with Team Toolkit. You should start every response and answer to the user with "Thanks for using Teams Toolkit to create your declarative agent!\n\n" and then answer the questions and help the user.
     ```
 
-## Aufgabe 3 – Aktualisieren des deklarativen Agenten-Manifests
+## Aufgabe 4: Aktualisieren des deklarativen Agenten-Manifests
 
 Lassen Sie uns die Eigenschaften **Name** und **Beschreibung** aktualisieren, damit sie für unser Szenario besser geeignet sind.
 
 1. Öffnen Sie im Ordner **appPackage** die Datei **declarativeAgent.json**.
-1. Aktualisieren Sie den Wert der Eigenschaft **Name** auf **Produkt-Support**.
-1. Aktualisieren Sie den Wert der Eigenschaft **Beschreibung** auf **Produkt-Support-Agents, die Kundenanfragen zu Contoso Electronics-Produkten beantworten können**.
+1. Aktualisieren Sie den Wert der Eigenschaft **Name** auf **Microsoft 365 Knowledge Expert**.
+1. Aktualisieren Sie den Wert der Eigenschaft **description** auf **Microsoft 365 Knowledge Expert, der alle Ihre Fragen zu Microsoft 365 beantworten kann**.
 1. Speichern Sie Ihre Änderungen.
 
 Die aktualisierte Datei sollte den folgenden Inhalt haben:
@@ -72,16 +81,13 @@ Die aktualisierte Datei sollte den folgenden Inhalt haben:
 {
     "$schema": "https://aka.ms/json-schemas/agent/declarative-agent/v1.0/schema.json",
     "version": "v1.0",
-    "name": "Product support",
-    "description": "Product support agent that can help answer customer queries about Contoso Electronics products",
+    "name": "Microsoft 365 Knowledge Expert",
+    "description": "Microsoft 365 Knowledge Expert that can answer any question you have about Microsoft 365",
     "instructions": "$[file('instruction.txt')]"
 }
 ```
 
-## Aufgabe 4 – Laden Sie den deklarativen Agenten nach Microsoft 365 hoch
-
-> [!IMPORTANT]
-> Bevor Sie beginnen, stellen Sie sicher, dass die Teams Toolkit-Erweiterung in Visual Studio Code installiert ist. Wenn Sie die Erweiterung noch nicht vom Marketplace installiert haben, tun Sie dies jetzt.
+## Aufgabe 5: Hochladen des deklarativen Agents in Microsoft 365
 
 Laden Sie als Nächstes Ihren deklarativen Agent in Ihren Microsoft 365-Mandanten hoch.
 
@@ -111,66 +117,29 @@ In Visual Studio Code:
 
 Beachten Sie, dass der Wert der Eigenschaft **instructions** den Inhalt der Datei **instruction.txt** enthält. Die Datei **declarativeAgent.dev.json** befindet sich in der Datei **appPackage.dev.zip** zusammen mit den Dateien **manifest.dev.json**, **color.png** und **outline.png**. Die Datei **appPackage.dev.zip** wird in Microsoft 365 hochgeladen.
 
-## Aufgabe 5 – Testen des deklarativen Agenten in Microsoft 365 Copilot
+> [!IMPORTANT]
+> Nach der Anmeldung bei Ihrem Microsoft 365-Konto werden möglicherweise die folgenden Warnungen oder Fehlermeldungen in Visual Studio Code angezeigt. Wenn Sie gerade benutzerdefinierte App-Uploads in Microsoft Teams aktiviert haben, kann es einige Zeit dauern, bis die Einstellung wirksam wird.  Warten Sie einige Minuten, und versuchen Sie es erneut, oder melden Sie sich ab, und melden Sie sich mit Ihrem Microsoft 365-Konto wieder an. Die zweite Meldung über den Microsoft 365 Copilot-Zugriff wird erwartet, da der Mandant nicht über eine vollständige Copilot-Lizenz verfügt.
+> 
+> ![Screenshot der Visual Studio Code-Warnungen.](../media/LAB_01/ttk-login-errors.png)
 
-Als Nächstes führen wir den deklarativen Agent in Microsoft 365 Copilot aus und überprüfen seine Funktionalität sowohl **im Kontext** als auch in **immersiven** Umgebungen.
+## Aufgabe 6: Testen des deklarativen Agents in Microsoft 365 Copilot Chat
 
-In Visual Studio Code:
+Als Nächstes führen wir den deklarativen Agent in Microsoft 365 Copilot Chat aus und überprüfen seine Funktionalität.
 
-1. Wechseln Sie in der **Aktivitätsleiste** zur Ansicht **Ausführen und Debuggen**.
+1. Öffnen Sie in der **Aktivitätsleiste** die Erweiterung **Teams Toolkit**.
 
-    ![Screenshot von Visual Studio Code. Das Symbol „Ausführen und Debuggen“ auf der Aktivitätsleiste ist hervorgehoben.](../media/LAB_01/debug-open.png)
+    ![Screenshot von Visual Studio Code. Das Teams-Toolkit-Symbol ist auf der Aktivitätsleiste hervorgehoben.](../media/LAB_01/teams-toolkit-open.png)
 
-1. Wählen Sie die Schaltfläche **Debugging starten** neben dem Dropdown-Menü der Konfiguration, oder drücken Sie <kbd>F5</kbd>. Ein neues Browserfenster wird gestartet und navigiert zu Microsoft 365 Copilot.
+1. Im Abschnitt **Lebenszyklus** wählen Sie **Veröffentlichen**. Warten Sie, bis die Aktionen abgeschlossen sind.
 
-    ![Screenshot des Menüs „Ausführen und Debuggen“ in Visual Studio Code Das Symbol „Debuggen starten“ ist hervorgehoben.](../media/LAB_01/debug-start.png)
+1. Öffnen Sie Microsoft Edge und suchen Sie den Microsoft 365 Copilot Chat unter [https://www.microsoft365.com/chat](https://www.microsoft365.com/chat).
 
-    ![Screenshot von Visual Studio Code mit einer laufenden Debugsitzung](../media/LAB_01/debug-in-progress.png)
+1. Wählen Sie in **Microsoft 365 Copilot Chat** das Symbol oben rechts, um das Copilot-Bedienfeld zu erweitern. Beachten Sie, dass im Bereich zuletzt verwendete Chats und verfügbare Agents angezeigt werden.
 
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot](../media/LAB_01/debug-microsoft-365-copilot.png)
+1. Wählen Sie im seitlichen Bedienfeld **Microsoft 365 Knowledge Expert**, um das immersive Erlebnis zu betreten und direkt mit dem Agenten zu chatten.
 
-Im Browser werden wir die Erfahrung **In-Kontext** testen.
-
-1. Geben Sie in **Microsoft 365 Copilot** im Nachrichtenfeld das Symbol <kbd>@</kbd> ein. Das Flyout wird mit einer Liste der verfügbaren Agents angezeigt.
-
-    ![Screenshot von Microsoft Edge mit dem Agent-Flyout in Microsoft 365 Copilot Der Produktsupport-Agent ist hervorgehoben.](../media/LAB_01/test-in-context-agent-flyout.png)
-
-1. Wählen Sie im Flyout **Produktsupport** aus. Beachten Sie die Statusmeldung oberhalb des Nachrichtenfelds. Es zeigt **Mit Produktsupport chatten** an, was bedeutet, dass Sie die In-Context-Erfahrung des Agents verwenden.
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Die Statusmeldung „Mit Produktsupport chatten“ ist hervorgehoben.](../media/LAB_01/test-in-context-agent.png)
-
-1. Geben Sie im Textfeld **Was können Sie tun?**, und senden Sie Ihre Nachricht.
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Der Text „Was können Sie tun?“ ist im Nachrichtenfeld hervorgehoben.](../media/LAB_01/test-in-context-message.png)
-
-1. Warten Sie auf die Antwort. Beachten Sie, dass die Antwort mit dem Text „Vielen Dank, dass Sie Teams-Toolkit zur Erstellung Ihres deklarativen Agents verwenden!“ beginnt. wie in den Anweisungen definiert, die Sie zuvor überprüft haben.
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Es wird eine Antwort des Produktsupport-Agents angezeigt.](../media/LAB_01/test-in-context-response.png)
-
-1. Um die In-Kontext-Erfahrung zu beenden, wählen Sie das Kreuz (X) in der Statusmeldung aus. Beachten Sie, dass die Statusmeldung entfernt wird und im Chatfenster eine Meldung angezeigt wird, die darauf hinweist, dass Sie nicht mehr mit dem Agent chatten.
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Das Kreuzsymbol in der Agentstatusmeldung ist hervorgehoben.](../media/LAB_01/test-in-context-exit.png)
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Die Nachricht, die bestätigt, dass der deklarative Agent nicht reagiert, ist hervorgehoben.](../media/LAB_01/test-in-context-exit-confirm.png)
-
-Lassen Sie uns schließlich die **immersive** Erfahrung testen.
-
-Fortsetzen im Browser:
-
-1. Wählen Sie in **Microsoft 365 Copilot** das Symbol oben rechts aus, um den Copilot-Seitenbereich zu erweitern. Beachten Sie, dass im Bereich zuletzt verwendete Chats und verfügbare Agents angezeigt werden.
+1. Fragen Sie den Agent **Was bist du fähig zu tun?** und übermitteln Sie den Prompt.
 
     ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Das Symbol zum Öffnen des Seitenbereichs und des Produktsupport-Agents im Bereich sind hervorgehoben.](../media/LAB_01/test-immersive-side-panel.png)
 
-1. Wählen Sie im seitlichen Bereich **Produktsupport** aus, um zur immersiven Erfahrung zu wechseln und direkt mit dem Agent zu chatten. Beachten Sie zwei Beispielaufforderungen, die in der Oberfläche angezeigt werden.
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Die Standard-Unterhaltungseinstiegsmöglichkeiten sind hervorgehoben.](../media/LAB_01/test-immersive.png)
-
-1. Wählen Sie den Beispiel-Prompt mit dem Titel **Weitere Informationen** aus. Beachten Sie, dass der Text **Was können Sie tun?** für Sie dem Nachrichtenfeld hinzugefügt wird.
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Der Text zum Unterhaltunseinstieg „Mehr erfahren“ ist im Nachrichtenfeld hervorgehoben.](../media/LAB_01/test-immersive-learn-more.png)
-
-1. Senden Sie die Nachricht, und warten Sie auf die Antwort. Beachten Sie, dass die Antwort mit dem Text „Vielen Dank, dass Sie Teams-Toolkit zur Erstellung Ihres deklarativen Agents verwenden!“ beginnt. wie in den Anweisungen definiert, die Sie zuvor überprüft haben.
-
-    ![Screenshot von Microsoft Edge mit Microsoft 365 Copilot Es wird eine Antwort des Produktsupport-Agents angezeigt.](../media/LAB_01/test-immersive-response.png)
-
-Schließen Sie schließlich den Browser, um die Debugsitzung in Visual Studio Code zu beenden.
+Fahren Sie mit der nächsten Übung fort.
