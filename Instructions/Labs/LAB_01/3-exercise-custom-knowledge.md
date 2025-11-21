@@ -14,7 +14,7 @@ In dieser Übung lernen Sie Microsoft Learn als Grundlage für Ihren Agent. Ihr 
 
 ## Aufgabe 1: Konfigurieren von Groundingdaten
 
-Konfigurieren Sie den OneDrive-Ordner als Quelle für die Grundlage von Grounding-Daten im Manifest für den deklarativen Agent.
+Konfigurieren Sie Microsoft Learn als Quelle für die Grundlage von Grounding-Daten im Manifest für den deklarativen Agent.
 
 In Visual Studio Code:
 
